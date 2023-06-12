@@ -1,19 +1,5 @@
 /* Raw - Another World Interpreter
  * Copyright (C) 2004 Gregory Montoir
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
-
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
 #ifndef __VIDEO_H__
@@ -67,12 +53,12 @@ struct Video {
 
 
 	uint8_t paletteIdRequested, currentPaletteId;
-	uint8_t *_pages[4];
+	uint8_t *_pagePtrs[4];
 
 	// I am almost sure that:
-	// _curPagePtr1 is the work buffer
-	// _curPagePtr2 is the background buffer1
-	// _curPagePtr3 is the background buffer2
+	// _curPagePtr1 is the backbuffer 
+	// _curPagePtr2 is the frontbuffer
+	// _curPagePtr3 is the background builder.
 	uint8_t *_curPagePtr1, *_curPagePtr2, *_curPagePtr3;
 
 	Polygon polygon;
@@ -99,15 +85,29 @@ struct Video {
 	void drawLineBlend(int16_t x1, int16_t x2, uint8_t color);
 	void drawLineN(int16_t x1, int16_t x2, uint8_t color);
 	void drawLineP(int16_t x1, int16_t x2, uint8_t color);
-	uint8_t *getPage(uint8_t page);
+	uint8_t *getPagePtr(uint8_t page);
 	void changePagePtr1(uint8_t page);
 	void fillPage(uint8_t page, uint8_t color);
 	void copyPage(uint8_t src, uint8_t dst, int16_t vscroll);
-	void copyPage(const uint8_t *src);
+	void copyPagePtr(const uint8_t *src);
+	uint8_t *allocPage();
 	void changePal(uint8_t pal);
 	void updateDisplay(uint8_t page);
 	
 	void saveOrLoad(Serializer &ser);
+
+	#define TRACE_PALETTE 0
+	#define TRACE_FRAMEBUFFER 0
+	#if TRACE_FRAMEBUFFER
+	    void dumpFrameBuffer(uint8_t *src,uint8_t *dst, int x,int y);
+		void dumpFrameBuffers(char* comment);
+		
+	#endif
+
+	#define TRACE_BG_BUFFER 0
+    #if TRACE_BG_BUFFER
+		void dumpBackGroundBuffer();
+    #endif
 };
 
 #endif

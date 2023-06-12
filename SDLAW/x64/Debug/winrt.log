@@ -1,0 +1,205 @@
+﻿  data.c
+  lighting.c
+  main.c
+  menu.c
+  midi.c
+c:\Users\media\source\repos\SDLPoP\src\menu.c(327,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[3][20]"
+c:\Users\media\source\repos\SDLPoP\src\menu.c(557,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[32][20]"
+c:\Users\media\source\repos\SDLPoP\src\menu.c(566,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[3][20]"
+c:\Users\media\source\repos\SDLPoP\src\menu.c(886,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[2][20]"
+c:\Users\media\source\repos\SDLPoP\src\menu.c(888,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[3][20]"
+c:\Users\media\source\repos\SDLPoP\src\menu.c(1510,62): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\menu.c(1531,60): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+  opl3.c
+  options.c
+c:\Users\media\source\repos\SDLPoP\src\midi.c(386,9): warning C4018: <: несоответствие типов со знаком и без знака
+c:\Users\media\source\repos\SDLPoP\src\midi.c(484,19): warning C4244: *=: преобразование "float" в "int", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\midi.c(537,27): warning C4244: -=: преобразование "int64_t" в "int", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\midi.c(544,29): warning C4018: >=: несоответствие типов со знаком и без знака
+c:\Users\media\source\repos\SDLPoP\src\midi.c(579,70): warning C4018: >=: несоответствие типов со знаком и без знака
+c:\Users\media\source\repos\SDLPoP\src\midi.c(580,30): warning C4018: <: несоответствие типов со знаком и без знака
+c:\Users\media\source\repos\SDLPoP\src\midi.c(586,49): warning C4244: =: преобразование "uint64_t" в "int", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\midi.c(513,79): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+  replay.c
+c:\Users\media\source\repos\SDLPoP\src\options.c(81,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[2][20]"
+c:\Users\media\source\repos\SDLPoP\src\options.c(82,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[5][20]"
+c:\Users\media\source\repos\SDLPoP\src\options.c(83,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[31][20]"
+c:\Users\media\source\repos\SDLPoP\src\options.c(92,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[3][20]"
+c:\Users\media\source\repos\SDLPoP\src\options.c(93,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[3][20]"
+c:\Users\media\source\repos\SDLPoP\src\options.c(95,1): warning C4048: разные индексы массива: "const char (*)[0][20]" и "const char (*)[3][20]"
+c:\Users\media\source\repos\SDLPoP\src\options.c(749,20): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\options.c(753,19): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  screenshot.c
+c:\Users\media\source\repos\SDLPoP\src\replay.c(261,19): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(476,48): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(486,48): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(516,22): warning C4267: +=: преобразование из "size_t" в "dword"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(525,22): warning C4267: +=: преобразование из "size_t" в "dword"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(812,15): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(815,15): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\replay.c(824,47): warning C4267: инициализация: преобразование из "size_t" в "dword"; возможна потеря данных
+  seg000.c
+  seg001.c
+c:\Users\media\source\repos\SDLPoP\src\seg000.c(1784,41): warning C4244: =: преобразование "double" в "word", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg000.c(1826,59): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+  seg002.c
+c:\Users\media\source\repos\SDLPoP\src\seg001.c(508,106): warning C4244: функция: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg001.c(508,142): warning C4244: функция: преобразование "short" в "sbyte", возможна потеря данных
+  seg003.c
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(73,16): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(83,15): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(94,15): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(178,14): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(180,17): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(289,37): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(293,44): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(939,19): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(953,18): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(1059,16): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg002.c(1061,19): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+  seg004.c
+c:\Users\media\source\repos\SDLPoP\src\seg003.c(183,17): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg003.c(615,19): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg003.c(716,17): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+  seg005.c
+c:\Users\media\source\repos\SDLPoP\src\seg004.c(63,29): warning C4244: =: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg004.c(70,30): warning C4244: =: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg004.c(129,33): warning C4244: =: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg004.c(305,18): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg004.c(476,18): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+  seg006.c
+c:\Users\media\source\repos\SDLPoP\src\seg005.c(117,17): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg005.c(216,17): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+  seg007.c
+c:\Users\media\source\repos\SDLPoP\src\seg006.c(1054,15): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg006.c(1145,13): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg006.c(1148,19): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+  seg008.c
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(252,34): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(364,20): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(569,27): warning C4244: =: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(576,36): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(577,11): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(577,17): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(584,11): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(584,17): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(590,11): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(590,17): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(599,12): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(599,18): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(609,13): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(609,19): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(678,29): warning C4244: =: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(680,13): warning C4244: функция: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(680,19): warning C4244: функция: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(771,33): warning C4244: =: преобразование "short" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(776,13): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(807,43): warning C4244: функция: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(818,11): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(818,17): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(855,28): warning C4244: =: преобразование "const word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(856,19): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(859,18): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(911,13): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(933,35): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(955,12): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(1049,25): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg007.c(1233,18): warning C4244: =: преобразование "const short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(212,31): warning C4244: функция: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(355,81): warning C4244: функция: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(356,85): warning C4244: функция: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(400,65): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+  seqtbl.c
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(419,96): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(421,48): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(423,75): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(437,63): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(440,75): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(467,47): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(470,76): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(473,63): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(478,73): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(481,58): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(485,65): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(490,75): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(496,49): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(517,93): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(523,92): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(575,34): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(576,31): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(590,45): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(591,45): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(612,44): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(631,92): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(653,73): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(657,67): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(661,67): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(682,92): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(686,67): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(693,85): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(768,29): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(795,29): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(824,28): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1098,68): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1102,76): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1115,61): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1120,65): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1125,65): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1133,60): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1137,65): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1467,78): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1605,17): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1607,18): warning C4244: =: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1686,15): warning C4244: функция: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1829,15): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1952,63): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1953,63): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1954,63): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1957,62): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1960,15): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1962,15): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1970,51): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1974,54): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(1998,51): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(2015,54): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(2046,68): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg008.c(2061,53): warning C4244: функция: преобразование "word" в "sbyte", возможна потеря данных
+  stb_vorbis.c
+  seg009.cpp
+  SDL_winrt_main_NonXAML.cpp
+c:\Users\media\source\repos\SDLPoP\src\types.h(267,18): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(267,18): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(433,15): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(433,15): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(441,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(441,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(499,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(499,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(529,12): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(529,12): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(538,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(538,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(548,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(548,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(560,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(560,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(562,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(562,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(576,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(576,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(600,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(600,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(602,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\types.h(602,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg009.cpp)
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(251,21): warning C4244: =: преобразование "time_t" в "dword", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(1222,131): warning C4244: аргумент: преобразование "short" в "byte", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(1351,58): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(1546,31): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(2179,86): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(2604,81): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(2607,44): warning C4838: Преобразование из "int" в "short" требует сужающего преобразования.
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(2636,22): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(2639,81): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(2642,44): warning C4838: Преобразование из "int" в "short" требует сужающего преобразования.
+c:\Users\media\source\repos\SDLPoP\src\seg009.cpp(3259,64): warning C4244: =: преобразование "double" в "word", возможна потеря данных
+LINK : fatal error LNK1104: не удается открыть файл "SDL2_image.lib"

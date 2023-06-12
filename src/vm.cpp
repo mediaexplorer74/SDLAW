@@ -1,19 +1,5 @@
 /* Raw - Another World Interpreter
  * Copyright (C) 2004 Gregory Montoir
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
-
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
 #include <ctime>
@@ -27,49 +13,49 @@
 #include "parts.h"
 #include "file.h"
 
-VirtualMachine::VirtualMachine(Mixer *mix, Resource *resParameter, SfxPlayer *ply, Video *vid, System *stub)
-	: mixer(mix), res(resParameter), player(ply), video(vid), sys(stub) {
+VirtualMachine::VirtualMachine(Mixer *mix, Resource *resParameter, SfxPlayer *ply, 
+	Video *vid, System *stub)
+	: mixer(mix), res(resParameter), player(ply), video(vid), sys(stub) 
+{
 }
 
-void VirtualMachine::init() {
+void VirtualMachine::init() 
+{
 
 	memset(vmVariables, 0, sizeof(vmVariables));
 	vmVariables[0x54] = 0x81;
 	vmVariables[VM_VARIABLE_RANDOM_SEED] = time(0);
-#ifdef BYPASS_PROTECTION
-   // these 3 variables are set by the game code
-   vmVariables[0xBC] = 0x10;
-   vmVariables[0xC6] = 0x80;
-   vmVariables[0xF2] = 4000;
-   // these 2 variables are set by the engine executable
-   vmVariables[0xDC] = 33;
-#endif
 
+	_fastMode = false;
 	player->_markVar = &vmVariables[VM_VARIABLE_MUS_MARK];
 }
 
-void VirtualMachine::op_movConst() {
+void VirtualMachine::op_movConst() 
+{
 	uint8_t variableId = _scriptPtr.fetchByte();
 	int16_t value = _scriptPtr.fetchWord();
 	debug(DBG_VM, "VirtualMachine::op_movConst(0x%02X, %d)", variableId, value);
 	vmVariables[variableId] = value;
 }
 
-void VirtualMachine::op_mov() {
+void VirtualMachine::op_mov() 
+{
 	uint8_t dstVariableId = _scriptPtr.fetchByte();
 	uint8_t srcVariableId = _scriptPtr.fetchByte();	
 	debug(DBG_VM, "VirtualMachine::op_mov(0x%02X, 0x%02X)", dstVariableId, srcVariableId);
 	vmVariables[dstVariableId] = vmVariables[srcVariableId];
 }
 
-void VirtualMachine::op_add() {
+void VirtualMachine::op_add() 
+{
 	uint8_t dstVariableId = _scriptPtr.fetchByte();
 	uint8_t srcVariableId = _scriptPtr.fetchByte();
 	debug(DBG_VM, "VirtualMachine::op_add(0x%02X, 0x%02X)", dstVariableId, srcVariableId);
 	vmVariables[dstVariableId] += vmVariables[srcVariableId];
 }
 
-void VirtualMachine::op_addConst() {
+void VirtualMachine::op_addConst() 
+{
 	if (res->currentPartId == 0x3E86 && _scriptPtr.pc == res->segBytecode + 0x6D48) {
 		warning("VirtualMachine::op_addConst() hack for non-stop looping gun sound bug");
 		// the script 0x27 slot 0x17 doesn't stop the gun sound from looping, I 
@@ -86,7 +72,8 @@ void VirtualMachine::op_addConst() {
 	vmVariables[variableId] += value;
 }
 
-void VirtualMachine::op_call() {
+void VirtualMachine::op_call() 
+{
 
 	uint16_t offset = _scriptPtr.fetchWord();
 	uint8_t sp = _stackPtr;
@@ -100,7 +87,8 @@ void VirtualMachine::op_call() {
 	_scriptPtr.pc = res->segBytecode + offset ;
 }
 
-void VirtualMachine::op_ret() {
+void VirtualMachine::op_ret() 
+{
 	debug(DBG_VM, "VirtualMachine::op_ret()");
 	if (_stackPtr == 0) {
 		error("VirtualMachine::op_ret() ec=0x%X stack underflow", 0x8F);
@@ -110,25 +98,29 @@ void VirtualMachine::op_ret() {
 	_scriptPtr.pc = res->segBytecode + _scriptStackCalls[sp];
 }
 
-void VirtualMachine::op_pauseThread() {
+void VirtualMachine::op_pauseThread() 
+{
 	debug(DBG_VM, "VirtualMachine::op_pauseThread()");
 	gotoNextThread = true;
 }
 
-void VirtualMachine::op_jmp() {
+void VirtualMachine::op_jmp() 
+{
 	uint16_t pcOffset = _scriptPtr.fetchWord();
 	debug(DBG_VM, "VirtualMachine::op_jmp(0x%02X)", pcOffset);
 	_scriptPtr.pc = res->segBytecode + pcOffset;	
 }
 
-void VirtualMachine::op_setSetVect() {
+void VirtualMachine::op_setSetVect() 
+{
 	uint8_t threadId = _scriptPtr.fetchByte();
 	uint16_t pcOffsetRequested = _scriptPtr.fetchWord();
 	debug(DBG_VM, "VirtualMachine::op_setSetVect(0x%X, 0x%X)", threadId,pcOffsetRequested);
-	threadsData[REQUESTED_PC_OFFSET][threadId] = pcOffsetRequested;
+	threadsData[1][threadId] = pcOffsetRequested;
 }
 
-void VirtualMachine::op_jnz() {
+void VirtualMachine::op_jnz() 
+{
 	uint8_t i = _scriptPtr.fetchByte();
 	debug(DBG_VM, "VirtualMachine::op_jnz(0x%02X)", i);
 	--vmVariables[i];
@@ -139,46 +131,54 @@ void VirtualMachine::op_jnz() {
 	}
 }
 
-void VirtualMachine::op_condJmp() {
+#define BYPASS_PROTECTION
+void VirtualMachine::op_condJmp() 
+{
+	
+	//printf("Jump : %X \n",_scriptPtr.pc-res->segBytecode);
+//FCS Whoever wrote this is patching the bytecode on the fly. This is ballzy !!
+#ifdef BYPASS_PROTECTION
+	
+	if (res->currentPartId == GAME_PART_FIRST && _scriptPtr.pc == res->segBytecode + 0xCB9) 
+	{
+		
+		// (0x0CB8) condJmp(0x80, VAR(41), VAR(30), 0xCD3)
+		*(_scriptPtr.pc + 0x00) = 0x81;
+		*(_scriptPtr.pc + 0x03) = 0x0D;
+		*(_scriptPtr.pc + 0x04) = 0x24;
+		// (0x0D4E) condJmp(0x4, VAR(50), 6, 0xDBC)		
+		*(_scriptPtr.pc + 0x99) = 0x0D;
+		*(_scriptPtr.pc + 0x9A) = 0x5A;
+		printf("VirtualMachine::op_condJmp() bypassing protection");
+		printf("bytecode has been patched/n");
+		
+		//this->bypassProtection() ;
+	}
+	
+	
+#endif
+
 	uint8_t opcode = _scriptPtr.fetchByte();
-  const uint8_t var = _scriptPtr.fetchByte();
-  int16_t b = vmVariables[var];
+	int16_t b = vmVariables[_scriptPtr.fetchByte()];
+	uint8_t c = _scriptPtr.fetchByte();	
 	int16_t a;
 
 	if (opcode & 0x80) {
-		a = vmVariables[_scriptPtr.fetchByte()];
-	} else if (opcode & 0x40) {
-    a = _scriptPtr.fetchWord();
+		a = vmVariables[c];
+	} else if (opcode & 0x40) 
+	{
+		a = c * 256 + _scriptPtr.fetchByte();
 	} else {
-    a = _scriptPtr.fetchByte();
+		a = c;
 	}
 	debug(DBG_VM, "VirtualMachine::op_condJmp(%d, 0x%02X, 0x%02X)", opcode, b, a);
 
 	// Check if the conditional value is met.
 	bool expr = false;
-	switch (opcode & 7) {
+	switch (opcode & 7) 
+	{
 	case 0:	// jz
 		expr = (b == a);
-#ifdef BYPASS_PROTECTION
-      if (res->currentPartId == 16000) {
-        //
-        // 0CB8: jmpIf(VAR(0x29) == VAR(0x1E), @0CD3)
-        // ...
-        //
-        if (b == 0x29 && (opcode & 0x80) != 0) {
-          // 4 symbols
-          vmVariables[0x29] = vmVariables[0x1E];
-          vmVariables[0x2A] = vmVariables[0x1F];
-          vmVariables[0x2B] = vmVariables[0x20];
-          vmVariables[0x2C] = vmVariables[0x21];
-          // counters
-          vmVariables[0x32] = 6;
-          vmVariables[0x64] = 20;
-          warning("Script::op_condJmp() bypassing protection");
-          expr = true;
-        }
-      }
-#endif
 		break;
 	case 1: // jnz
 		expr = (b != a);
@@ -200,7 +200,8 @@ void VirtualMachine::op_condJmp() {
 		break;
 	}
 
-	if (expr) {
+	if (expr) 
+	{
 		op_jmp();
 	} else {
 		_scriptPtr.fetchWord();
@@ -208,13 +209,15 @@ void VirtualMachine::op_condJmp() {
 
 }
 
-void VirtualMachine::op_setPalette() {
+void VirtualMachine::op_setPalette() 
+{
 	uint16_t paletteId = _scriptPtr.fetchWord();
 	debug(DBG_VM, "VirtualMachine::op_changePalette(%d)", paletteId);
 	video->paletteIdRequested = paletteId >> 8;
 }
 
-void VirtualMachine::op_resetThread() {
+void VirtualMachine::op_resetThread() 
+{
 
 	uint8_t threadId = _scriptPtr.fetchByte();
 	uint8_t i =        _scriptPtr.fetchByte();
@@ -227,7 +230,8 @@ void VirtualMachine::op_resetThread() {
 	i = i & (VM_NUM_THREADS-1) ;
 	int8_t n = i - threadId;
 
-	if (n < 0) {
+	if (n < 0) 
+	{
 		warning("VirtualMachine::op_resetThread() ec=0x%X (n < 0)", 0x880);
 		return;
 	}
@@ -236,33 +240,39 @@ void VirtualMachine::op_resetThread() {
 
 	debug(DBG_VM, "VirtualMachine::op_resetThread(%d, %d, %d)", threadId, i, a);
 
-	if (a == 2) {
-		uint16_t *p = &threadsData[REQUESTED_PC_OFFSET][threadId];
+	if (a == 2) 
+	{
+		uint16_t *p = &threadsData[1][threadId];
 		while (n--) {
 			*p++ = 0xFFFE;
 		}
-	} else if (a < 2) {
-		uint8_t *p = &vmIsChannelActive[REQUESTED_STATE][threadId];
-		while (n--) {
+	} else if (a < 2) 
+	{
+		uint8_t *p = &vmIsChannelActive[1][threadId];
+		while (n--) 
+		{
 			*p++ = a;
 		}
 	}
 }
 
-void VirtualMachine::op_selectVideoPage() {
+void VirtualMachine::op_selectVideoPage() 
+{
 	uint8_t frameBufferId = _scriptPtr.fetchByte();
 	debug(DBG_VM, "VirtualMachine::op_selectVideoPage(%d)", frameBufferId);
 	video->changePagePtr1(frameBufferId);
 }
 
-void VirtualMachine::op_fillVideoPage() {
+void VirtualMachine::op_fillVideoPage() 
+{
 	uint8_t pageId = _scriptPtr.fetchByte();
 	uint8_t color = _scriptPtr.fetchByte();
 	debug(DBG_VM, "VirtualMachine::op_fillVideoPage(%d, %d)", pageId, color);
 	video->fillPage(pageId, color);
 }
 
-void VirtualMachine::op_copyVideoPage() {
+void VirtualMachine::op_copyVideoPage() 
+{
 	uint8_t srcPageId = _scriptPtr.fetchByte();
 	uint8_t dstPageId = _scriptPtr.fetchByte();
 	debug(DBG_VM, "VirtualMachine::op_copyVideoPage(%d, %d)", srcPageId, dstPageId);
@@ -271,23 +281,37 @@ void VirtualMachine::op_copyVideoPage() {
 
 
 uint32_t lastTimeStamp = 0;
-void VirtualMachine::op_blitFramebuffer() {
+void VirtualMachine::op_blitFramebuffer() 
+{
 
 	uint8_t pageId = _scriptPtr.fetchByte();
 	debug(DBG_VM, "VirtualMachine::op_blitFramebuffer(%d)", pageId);
 	inp_handleSpecialKeys();
 
-  int32_t delay = sys->getTimeStamp() - lastTimeStamp;
-  int32_t timeToSleep = vmVariables[VM_VARIABLE_PAUSE_SLICES] * 20 - delay;
+	//Nasty hack....was this present in the original assembly  ??!!
+	if (res->currentPartId == GAME_PART_FIRST && vmVariables[0x67] == 1) 
+		vmVariables[0xDC] = 0x21;
+	
+	if (!_fastMode) 
+	{
 
-  // The bytecode will set vmVariables[VM_VARIABLE_PAUSE_SLICES] from 1 to 5
-  // The virtual machine hence indicate how long the image should be displayed.
+		int32_t delay = sys->getTimeStamp() - lastTimeStamp;
+		int32_t timeToSleep = vmVariables[VM_VARIABLE_PAUSE_SLICES] * 20 - delay;
 
-  if (timeToSleep > 0) {
-    sys->sleep(timeToSleep);
-  }
+		// The bytecode will set vmVariables[VM_VARIABLE_PAUSE_SLICES] from 1 to 5
+		// The virtual machine hence indicate how long the image should be displayed.
 
-  lastTimeStamp = sys->getTimeStamp();
+		//printf("vmVariables[VM_VARIABLE_PAUSE_SLICES]=%d\n",vmVariables[VM_VARIABLE_PAUSE_SLICES]);
+
+
+		if (timeToSleep > 0)
+		{
+		//	printf("Sleeping for=%d\n",timeToSleep);
+			sys->sleep(timeToSleep);
+		}
+
+		lastTimeStamp = sys->getTimeStamp();
+	}
 
 	//WTF ?
 	vmVariables[0xF7] = 0;
@@ -295,13 +319,15 @@ void VirtualMachine::op_blitFramebuffer() {
 	video->updateDisplay(pageId);
 }
 
-void VirtualMachine::op_killThread() {
+void VirtualMachine::op_killThread() 
+{
 	debug(DBG_VM, "VirtualMachine::op_killThread()");
 	_scriptPtr.pc = res->segBytecode + 0xFFFF;
 	gotoNextThread = true;
 }
 
-void VirtualMachine::op_drawString() {
+void VirtualMachine::op_drawString() 
+{
 	uint16_t stringId = _scriptPtr.fetchWord();
 	uint16_t x = _scriptPtr.fetchByte();
 	uint16_t y = _scriptPtr.fetchByte();
@@ -446,7 +472,7 @@ void VirtualMachine::hostFrame() {
 		if (vmIsChannelActive[CURR_STATE][threadId])
 			continue;
 		
-		uint16_t n = threadsData[PC_OFFSET][threadId];
+		uint16_t n = threadsData[0][threadId];
 
 		if (n != VM_INACTIVE_THREAD) {
 
@@ -464,7 +490,7 @@ void VirtualMachine::hostFrame() {
 			threadsData[PC_OFFSET][threadId] = _scriptPtr.pc - res->segBytecode;
 
 
-			debug(DBG_VM, "VirtualMachine::hostFrame() i=0x%02X pos=0x%X", threadId, threadsData[PC_OFFSET][threadId]);
+			debug(DBG_VM, "VirtualMachine::hostFrame() i=0x%02X pos=0x%X", threadId, threadsData[0][threadId]);
 			if (sys->input.quit) {
 				break;
 			}
@@ -671,7 +697,7 @@ void VirtualMachine::snd_playSound(uint16_t resNum, uint8_t freq, uint8_t vol, u
 	
 	MemEntry *me = &res->_memList[resNum];
 
-	if (me->state != MEMENTRY_STATE_LOADED)
+	if (me->state != 1)
 		return;
 
 	
@@ -716,3 +742,21 @@ void VirtualMachine::saveOrLoad(Serializer &ser) {
 	};
 	ser.saveOrLoadEntries(entries);
 }
+
+void VirtualMachine::bypassProtection() 
+{
+	File f(true);
+
+	if (!f.open("bank0e", res->getDataDir(), "rb")) {
+		warning("Unable to bypass protection: add bank0e file to datadir");
+	} else {
+		Serializer s(&f, Serializer::SM_LOAD, res->_memPtrStart, 2);
+		this->saveOrLoad(s);
+		res->saveOrLoad(s);
+		video->saveOrLoad(s);
+		player->saveOrLoad(s);
+		mixer->saveOrLoad(s);
+	}
+	f.close();
+}
+

@@ -1,0 +1,16 @@
+C:\Users\media\source\repos\SDLPoP\Output\libpng-UWP\ARM\Debug\libpng-UWP\libpng_UWP.pri
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\priconfig.xml
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\priconfig.xml.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\unfiltered.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\filtered.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\filtered.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\excluded.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\excluded.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\resources.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\resources.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\pri.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\pri.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\qualifiers.txt
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\qualifiers.txt.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\libpng-UWP\ARM\Debug\MultipleQualifiersPerDimensionFound.txt

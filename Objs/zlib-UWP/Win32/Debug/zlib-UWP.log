@@ -1,0 +1,17 @@
+﻿  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  gzclose.c
+  gzlib.c
+  gzread.c
+  gzwrite.c
+  infback.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  uncompr.c
+  zutil.c
+LINK : warning LNK4068: параметр /MACHINE не указан; принимается по умолчанию на X86
+  zlib-UWP.vcxproj -> C:\Users\media\source\repos\SDLPoP\Output\zlib-UWP\Win32\Debug\zlib-UWP\zlib.lib

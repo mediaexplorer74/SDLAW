@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{fa9f8bba-5552-44bc-84a9-5b974a36d121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{16d8f018-2395-43e6-9ca3-4fa39d6f0517}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\png.h" />
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\pngconf.h" />
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\pngdebug.h" />
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\pnginfo.h" />
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\pnglibconf.h" />
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\pngpriv.h" />
+    <ClInclude Include="..\SDL2_image\external\libpng-1.6.2\pngstruct.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\png.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngerror.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngget.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngmem.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngpread.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngread.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngrio.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngrtran.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngrutil.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngset.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngtest.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngtrans.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngwio.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngwrite.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngwtran.c" />
+    <ClCompile Include="..\SDL2_image\external\libpng-1.6.2\pngwutil.c" />
+  </ItemGroup>
+</Project>

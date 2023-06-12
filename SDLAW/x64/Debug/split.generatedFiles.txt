@@ -1,0 +1,10 @@
+x64\Debug\split.pri
+x64\Debug\split.map.txt
+x64\Debug\split.scale-100.pri
+x64\Debug\split.scale-100.map.txt
+x64\Debug\split.scale-125.pri
+x64\Debug\split.scale-125.map.txt
+x64\Debug\split.scale-150.pri
+x64\Debug\split.scale-150.map.txt
+x64\Debug\split.scale-400.pri
+x64\Debug\split.scale-400.map.txt

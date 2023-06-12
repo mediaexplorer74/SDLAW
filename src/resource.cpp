@@ -1,19 +1,5 @@
 /* Raw - Another World Interpreter
  * Copyright (C) 2004 Gregory Montoir
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
-
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
 #include "resource.h"
@@ -25,7 +11,7 @@
 #include "parts.h"
 
 Resource::Resource(Video *vid, const char *dataDir) 
-	: video(vid), _dataDir(dataDir), currentPartId(0),requestedNextPart(0) {
+	: video(vid), _dataDir(dataDir), currentPartId(0) {
 }
 
 void Resource::readBank(const MemEntry *me, uint8_t *dstBuf) {
@@ -95,10 +81,6 @@ void Resource::readEntries() {
 		memEntry->unk10 = f.readUint16BE();
 		memEntry->size = f.readUint16BE();
 
-    if (memEntry->state == MEMENTRY_STATE_END_OF_MEMLIST) {
-      break;
-    }
-
 		//Memory tracking
 		if (memEntry->packedSize==memEntry->size)
 		{
@@ -115,6 +97,11 @@ void Resource::readEntries() {
 		resourceSizeStats[STATS_TOTAL_SIZE][RES_SIZE] += memEntry->size;
 		resourceSizeStats[memEntry->type][RES_COMPRESSED] += memEntry->packedSize;
 		resourceSizeStats[STATS_TOTAL_SIZE][RES_COMPRESSED] += memEntry->packedSize;
+
+
+		if (memEntry->state == MEMENTRY_STATE_END_OF_MEMLIST) {
+			break;
+		}
 
 		debug(DBG_RES, "R:0x%02X, %-17s size=%5d (compacted gain=%2.0f%%)",
 				resourceCounter,
@@ -195,7 +182,7 @@ void Resource::loadMarkedAsNeeded() {
 			loadDestination = _scriptCurPtr;
 			if (me->size > _vidBakPtr - _scriptCurPtr) {
 				warning("Resource::load() not enough memory");
-				me->state = MEMENTRY_STATE_NOT_NEEDED;
+				me->state = 0;
 				continue;
 			}
 		}
@@ -208,8 +195,8 @@ void Resource::loadMarkedAsNeeded() {
 			debug(DBG_BANK, "Resource::load() bufPos=%X size=%X type=%X pos=%X bankId=%X", loadDestination - _memPtrStart, me->packedSize, me->type, me->bankOffset, me->bankId);
 			readBank(me, loadDestination);
 			if(me->type == RT_POLY_ANIM) {
-        video->copyPage(_vidCurPtr);
-				me->state = MEMENTRY_STATE_NOT_NEEDED;
+				video->copyPagePtr(_vidCurPtr);
+				me->state = 0;
 			} else {
 				me->bufPtr = loadDestination;
 				me->state = MEMENTRY_STATE_LOADED;
@@ -238,7 +225,7 @@ void Resource::invalidateAll() {
 	MemEntry *me = _memList;
 	uint16_t i = _numMemList;
 	while (i--) {
-		me->state = MEMENTRY_STATE_NOT_NEEDED;
+		me->state = 0;
 		++me;
 	}
 	_scriptCurPtr = _memPtrStart;
@@ -293,14 +280,14 @@ void Resource::setupPart(uint16_t partId) {
 	// Mark all resources as located on harddrive.
 	invalidateAll();
 
-	_memList[paletteIndex].state = MEMENTRY_STATE_LOAD_ME;
-	_memList[codeIndex].state = MEMENTRY_STATE_LOAD_ME;
-	_memList[videoCinematicIndex].state = MEMENTRY_STATE_LOAD_ME;
+	_memList[paletteIndex].state = 2;
+	_memList[codeIndex].state = 2;
+	_memList[videoCinematicIndex].state = 2;
 
 	// This is probably a cinematic or a non interactive part of the game.
 	// Player and enemy polygons are not needed.
 	if (video2Index != MEMLIST_PART_NONE) 
-		_memList[video2Index].state = MEMENTRY_STATE_LOAD_ME;
+		_memList[video2Index].state = 2;
 	
 
 	loadMarkedAsNeeded();
@@ -356,7 +343,7 @@ void Resource::saveOrLoad(Serializer &ser) {
 			MemEntry *me = 0;
 			uint16_t num = _numMemList;
 			while (num--) {
-				if (it->state == MEMENTRY_STATE_LOADED && it->bufPtr == q) {
+				if (it->state == 1 && it->bufPtr == q) {
 					me = it;
 				}
 				++it;
@@ -394,8 +381,13 @@ void Resource::saveOrLoad(Serializer &ser) {
 			MemEntry *me = &_memList[*p++];
 			readBank(me, q);
 			me->bufPtr = q;
-			me->state = MEMENTRY_STATE_LOADED;
+			me->state = 1;
 			q += me->size;
 		}
 	}	
+}
+
+const char* Resource::getDataDir()
+{
+	return this->_dataDir;
 }

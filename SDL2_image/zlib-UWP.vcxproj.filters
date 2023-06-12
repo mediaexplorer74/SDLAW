@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e8ea24e2-553c-4e64-8e9a-665867c5b6f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bf1a778d-30e1-4f1b-8519-a48e9eee1526}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\crc32.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\deflate.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\gzguts.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\inffast.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\inffixed.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\inflate.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\inftrees.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\trees.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\zconf.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\zlib.h" />
+    <ClInclude Include="..\SDL2_image\external\zlib-1.2.8\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\adler32.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\compress.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\crc32.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\deflate.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\gzclose.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\gzlib.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\gzread.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\gzwrite.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\infback.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\inffast.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\inflate.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\inftrees.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\trees.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\uncompr.c" />
+    <ClCompile Include="..\SDL2_image\external\zlib-1.2.8\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SDL2_image\external\zlib-1.2.8\win32\zlib.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\SDL2_image\external\zlib-1.2.8\win32\zlib1.rc" />
+  </ItemGroup>
+</Project>

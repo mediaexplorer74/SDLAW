@@ -1,0 +1,17 @@
+C:\Users\media\source\repos\SDLPoP\Debug\SDL-UWP\SDL2.pri
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\SDL-UWP.vcxproj.AssemblyReference.cache
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\priconfig.xml
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\priconfig.xml.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\unfiltered.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\filtered.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\filtered.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\excluded.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\excluded.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\resources.resfiles
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\resources.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\pri.resfiles
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\pri.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\qualifiers.txt
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\qualifiers.txt.intermediate
+C:\Users\media\source\repos\SDLPoP\SDL2\Debug\MultipleQualifiersPerDimensionFound.txt

@@ -1,0 +1,1 @@
+MainPackage=C:\Users\media\source\repos\SDLPoP\x64\Debug\SDLPoP\SDLPoP_1.0.8.0_x64_Debug.appx

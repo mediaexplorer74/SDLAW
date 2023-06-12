@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\SDL2_image\IMG.c" />
+    <ClCompile Include="..\SDL2_image\IMG_bmp.c" />
+    <ClCompile Include="..\SDL2_image\IMG_gif.c" />
+    <ClCompile Include="..\SDL2_image\IMG_jpg.c" />
+    <ClCompile Include="..\SDL2_image\IMG_lbm.c" />
+    <ClCompile Include="..\SDL2_image\IMG_pcx.c" />
+    <ClCompile Include="..\SDL2_image\IMG_png.c" />
+    <ClCompile Include="..\SDL2_image\IMG_pnm.c" />
+    <ClCompile Include="..\SDL2_image\IMG_tga.c" />
+    <ClCompile Include="..\SDL2_image\IMG_tif.c" />
+    <ClCompile Include="..\SDL2_image\IMG_webp.c" />
+    <ClCompile Include="..\SDL2_image\IMG_xcf.c" />
+    <ClCompile Include="..\SDL2_image\IMG_xpm.c" />
+    <ClCompile Include="..\SDL2_image\IMG_xv.c" />
+    <ClCompile Include="..\SDL2_image\IMG_xxx.c" />
+  </ItemGroup>
+</Project>

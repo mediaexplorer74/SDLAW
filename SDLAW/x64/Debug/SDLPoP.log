@@ -1,0 +1,3 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (winrt.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  SDLPoP.vcxproj -> C:\Users\media\source\repos\SDLPoP\x64\Debug\SDLPoP\SDLPoP.exe
+  SDLPoP -> C:\Users\media\source\repos\SDLPoP\x64\Debug\SDLPoP\SDLPoP_1.0.8.0_x64_Debug.appx

@@ -1,0 +1,16 @@
+C:\Users\media\source\repos\SDLPoP\Output\SDL2_image-UWP\Win32\Debug\SDL_image-UWP\SDL2_image_UWP.pri
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\priconfig.xml
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\priconfig.xml.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\unfiltered.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\filtered.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\filtered.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\excluded.layout.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\excluded.layout.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\resources.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\resources.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\pri.resfiles
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\pri.resfiles.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\qualifiers.txt
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\qualifiers.txt.intermediate
+C:\Users\media\source\repos\SDLPoP\Objs\SDL2_image-UWP\Win32\Debug\MultipleQualifiersPerDimensionFound.txt

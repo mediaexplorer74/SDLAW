@@ -1,19 +1,5 @@
 /* Raw - Another World Interpreter
  * Copyright (C) 2004 Gregory Montoir
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
-
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
 #include "sfxplayer.h"
@@ -50,7 +36,7 @@ void SfxPlayer::loadSfxModule(uint16_t resNum, uint16_t delay, uint8_t pos) {
 
 	MemEntry *me = &res->_memList[resNum];
 
-	if (me->state == MEMENTRY_STATE_LOADED && me->type == Resource::RT_MUSIC) {
+	if (me->state == 1 && me->type == Resource::RT_MUSIC) {
 		_resNum = resNum;
 		memset(&_sfxMod, 0, sizeof(SfxModule));
 		_sfxMod.curOrder = pos;
@@ -83,7 +69,7 @@ void SfxPlayer::prepareInstruments(const uint8_t *p) {
 		if (resNum != 0) {
 			ins->volume = READ_BE_UINT16(p);
 			MemEntry *me = &res->_memList[resNum];
-			if (me->state == MEMENTRY_STATE_LOADED && me->type == Resource::RT_SOUND) {
+			if (me->state == 1 && me->type == 0) {
 				ins->data = me->bufPtr;
 				memset(ins->data + 8, 0, 4);
 				debug(DBG_SND, "Loaded instrument 0x%X n=%d volume=%d", resNum, i, ins->volume);

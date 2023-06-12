@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>3667300b-2f33-4384-905e-ff0e075b0140</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="source">
+      <UniqueIdentifier>{d3fdede2-adeb-425d-8055-68ab011daf1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{56e6702c-f4be-417b-9287-20511e0065b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\data.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\lighting.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\menu.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\midi.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\opl3.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\options.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\replay.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\screenshot.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg000.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg002.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg001.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stb_vorbis.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg003.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg004.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg005.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg006.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg007.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg008.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seg009.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\seqtbl.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\SDL2\src\main\winrt\SDL_winrt_main_NonXAML.cpp" />
+    <ClCompile Include="..\src\bank.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\engine.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\file.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mixer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\parts.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pop_main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\serializer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sfxplayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\staticres.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sysImplementation.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\vm.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\common.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\config.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\data.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GPLv3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\opl3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\proto.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\types.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bank.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\endian.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\engine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\file.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\intern.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mixer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\parts.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\serializer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sfxplayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sys.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\util.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\vm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SDLPop_TemporaryKey.pfx" />
+    <None Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
+    <None Include="..\SDLAW.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\SmallTile.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallTile.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\data\icon.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\data\light.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-125.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-150.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LargeTile.scale-400.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

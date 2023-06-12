@@ -1,0 +1,27 @@
+﻿  IMG.c
+  IMG_bmp.c
+  IMG_gif.c
+  IMG_jpg.c
+  IMG_lbm.c
+  IMG_pcx.c
+  IMG_png.c
+  IMG_pnm.c
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(276,40): warning C4113: "png_uint_32 (__cdecl *)(png_const_structrp,png_inforp,png_colorp *,int *)" отличается в списках параметров от "png_uint_32 (__cdecl *)(png_const_structrp,png_infop,png_colorp *,int *)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(277,40): warning C4113: "png_uint_32 (__cdecl *)(png_const_structrp,png_inforp,png_bytep *,int *,png_color_16p *)" отличается в списках параметров от "png_uint_32 (__cdecl *)(png_const_structrp,png_infop,png_bytep *,int *,png_color_16p *)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(279,44): warning C4113: "void (__cdecl *)(png_structrp,png_bytepp)" отличается в списках параметров от "void (__cdecl *)(png_structp,png_bytepp)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(280,42): warning C4113: "void (__cdecl *)(png_structrp,png_inforp)" отличается в списках параметров от "void (__cdecl *)(png_structp,png_infop)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(281,56): warning C4113: "void (__cdecl *)(png_structrp,png_inforp)" отличается в списках параметров от "void (__cdecl *)(png_structp,png_infop)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(282,44): warning C4113: "void (__cdecl *)(png_structrp)" отличается в списках параметров от "void (__cdecl *)(png_structp)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(283,54): warning C4113: "void (__cdecl *)(png_structrp)" отличается в списках параметров от "void (__cdecl *)(png_structp)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(284,46): warning C4113: "void (__cdecl *)(png_structrp)" отличается в списках параметров от "void (__cdecl *)(png_structp)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(285,46): warning C4113: "void (__cdecl *)(png_structrp,png_voidp,png_rw_ptr)" отличается в списках параметров от "void (__cdecl *)(png_structp,png_voidp,png_rw_ptr)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(286,48): warning C4113: "void (__cdecl *)(png_structrp)" отличается в списках параметров от "void (__cdecl *)(png_structp)"
+C:\Users\media\source\repos\SDLPoP\SDL2_image\IMG_png.c(289,52): warning C4113: "jmp_buf (*(__cdecl *)(png_structrp,png_longjmp_ptr,size_t))" отличается в списках параметров от "jmp_buf (*(__cdecl *)(png_structp,png_longjmp_ptr,size_t))"
+  IMG_tga.c
+  IMG_tif.c
+  IMG_webp.c
+  IMG_xcf.c
+  IMG_xpm.c
+  IMG_xv.c
+  IMG_xxx.c
+  SDL_image-UWP.vcxproj -> C:\Users\media\source\repos\SDLPoP\Output\SDL2_image-UWP\ARM\Debug\SDL_image-UWP\SDL2_image.lib
