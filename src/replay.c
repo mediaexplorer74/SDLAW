@@ -48,7 +48,7 @@ dword savestate_size = 0;
 
 // These are defined in seg000.c:
 typedef int process_func_type(void* data, size_t data_size);
-extern int quick_process(process_func_type process_func);
+//extern int quick_process(process_func_type process_func);
 extern const char quick_version[9];
 
 // header information read from the first part of a replay file
@@ -513,14 +513,20 @@ int process_load_from_buffer(void* data, size_t data_size) {
 	return 1;
 }
 
-int savestate_to_buffer() {
+int savestate_to_buffer() 
+{
 	int ok = 0;
 	if (savestate_buffer == NULL)
 		savestate_buffer = malloc(MAX_SAVESTATE_SIZE);
-	if (savestate_buffer != NULL) {
+
+	if (savestate_buffer != NULL) 
+	{
 		savestate_offset = 0;
 		savestate_size = 0;
-		ok = quick_process(process_to_buffer);
+
+		//RnD
+		//ok = quick_process(process_to_buffer);
+
 		savestate_size = savestate_offset;
 	}
 	return ok;
@@ -549,8 +555,10 @@ int restore_savestate_from_buffer()
 	int ok = 0;
 	savestate_offset = 0;
 	// This condition should be checked in process_load_from_buffer() instead of here.
-	while (savestate_offset < savestate_size) {
-		ok = quick_process(process_load_from_buffer);
+	while (savestate_offset < savestate_size) 
+	{
+		//RnD
+		//ok = quick_process(process_load_from_buffer);
 	}
 	reload_resources();
 	restore_room_after_quick_load();

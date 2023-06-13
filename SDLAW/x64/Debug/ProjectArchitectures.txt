@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\SDL-UWP.vcxproj;x64
+C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\SDL-UWP.vcxproj;x64
+C:\Users\Admin\source\repos\!Another\SDLAW\SDL2_image\libpng-UWP.vcxproj;x64
+C:\Users\Admin\source\repos\!Another\SDLAW\SDL2_image\SDL_image-UWP.vcxproj;x64
+C:\Users\Admin\source\repos\!Another\SDLAW\SDL2_image\zlib-UWP.vcxproj;x64
+C:\Users\Admin\source\repos\!Another\SDLAW\SDL2_image\zlib-UWP.vcxproj;x64
+C:\Users\Admin\source\repos\!Another\SDLAW\SDLAW\SDLAW.vcxproj;x64

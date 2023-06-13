@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PriInfo>
-	<ResourceMap name="SDLPoP" version="1.0" primary="true">
+	<ResourceMap name="SDLAW" version="1.0" primary="true">
 		<Qualifiers>
 			<AlternateForm>LIGHTUNPLATED,UNPLATED</AlternateForm>
 			<Scale>200</Scale>
 			<TargetSize>256,16,24,32,48</TargetSize>
 		</Qualifiers>
 		<ResourceMapSubtree name="Files">
-			<NamedResource name="icon.png" uri="ms-resource://SDLPoP/Files/icon.png">
+			<NamedResource name="SDLAW.ini" uri="ms-resource://SDLAW/Files/SDLAW.ini">
 				<Candidate type="Path">
-					<Value>icon.png</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="light.png" uri="ms-resource://SDLPoP/Files/light.png">
-				<Candidate type="Path">
-					<Value>light.png</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="SDLPoP.ini" uri="ms-resource://SDLPoP/Files/SDLPoP.ini">
-				<Candidate type="Path">
-					<Value>SDLPoP.ini</Value>
+					<Value>SDLAW.ini</Value>
 				</Candidate>
 			</NamedResource>
 			<ResourceMapSubtree name="Assets">
-				<NamedResource name="LargeTile.png" uri="ms-resource://SDLPoP/Files/Assets/LargeTile.png">
+				<NamedResource name="LargeTile.png" uri="ms-resource://SDLAW/Files/Assets/LargeTile.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\LargeTile.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="LockScreenLogo.png" uri="ms-resource://SDLPoP/Files/Assets/LockScreenLogo.png">
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://SDLAW/Files/Assets/LockScreenLogo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\LockScreenLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="SmallTile.png" uri="ms-resource://SDLPoP/Files/Assets/SmallTile.png">
+				<NamedResource name="SmallTile.png" uri="ms-resource://SDLAW/Files/Assets/SmallTile.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\SmallTile.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="SplashScreen.png" uri="ms-resource://SDLPoP/Files/Assets/SplashScreen.png">
+				<NamedResource name="SplashScreen.png" uri="ms-resource://SDLAW/Files/Assets/SplashScreen.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\SplashScreen.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Square150x150Logo.png" uri="ms-resource://SDLPoP/Files/Assets/Square150x150Logo.png">
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://SDLAW/Files/Assets/Square150x150Logo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\Square150x150Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Square44x44Logo.png" uri="ms-resource://SDLPoP/Files/Assets/Square44x44Logo.png">
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://SDLAW/Files/Assets/Square44x44Logo.png">
 					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
 						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</Value>
 					</Candidate>
@@ -98,12 +88,12 @@
 						<Value>Assets\Square44x44Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="StoreLogo.png" uri="ms-resource://SDLPoP/Files/Assets/StoreLogo.png">
+				<NamedResource name="StoreLogo.png" uri="ms-resource://SDLAW/Files/Assets/StoreLogo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\StoreLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://SDLPoP/Files/Assets/Wide310x150Logo.png">
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://SDLAW/Files/Assets/Wide310x150Logo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
 					</Candidate>

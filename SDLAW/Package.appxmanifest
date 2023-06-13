@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="SDLPoP"
-    Publisher="CN=media"
+    Name="SDLAW"
+    Publisher="CN=Admin"
     Version="1.0.8.0" />
 
-  <mp:PhoneIdentity PhoneProductId="a4d2e393-3689-46e4-8fa0-0671f8c1dc61" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="a4d23393-3689-46e4-8f24-467248c1dc61" PhonePublisherId="00440003-0240-0230-0440-250000002400"/>
 
   <Properties>
     <DisplayName>Prince of Persia</DisplayName>
@@ -32,10 +32,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="winrt.App">
       <uap:VisualElements
-        DisplayName="Prince of Persia"
+        DisplayName="Another World"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Prince of Persia"
+        Description="Another World"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

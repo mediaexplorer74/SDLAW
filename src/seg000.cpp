@@ -315,6 +315,7 @@ int process_load(void* data, size_t data_size)
 
 typedef int process_func_type(void* data, size_t data_size);
 
+/*
 int quick_process(process_func_type process_func) 
 {
 	int ok = 1;
@@ -349,11 +350,6 @@ int quick_process(process_func_type process_func)
 	process(holding_sword);
 	process(united_with_shadow);
 	process(have_sword);
-	/*process(ctrl1_forward);
-	process(ctrl1_backward);
-	process(ctrl1_up);
-	process(ctrl1_down);
-	process(ctrl1_shift2);*/
 	process(kid_sword_strike);
 	process(pickup_obj_type);
 	process(offguard);
@@ -419,6 +415,7 @@ int quick_process(process_func_type process_func)
 #undef process
 	return ok;
 }
+*/
 
 const char* quick_file = "QUICKSAVE.SAV";
 const char quick_version[] = "V1.16b4 ";
@@ -438,9 +435,11 @@ int quick_save() {
 	char custom_quick_path[POP_MAX_PATH];
 	const char* path = get_quick_path(custom_quick_path, sizeof(custom_quick_path));
 	quick_fp = fopen(path, "wb");
-	if (quick_fp != NULL) {
+	if (quick_fp != NULL) 
+	{
 		process_save((void*) quick_version, COUNT(quick_version));
-		ok = quick_process(process_save);
+		//RnD
+		//ok = quick_process(process_save);
 		fclose(quick_fp);
 		quick_fp = NULL;
 	}
@@ -515,7 +514,8 @@ int quick_load()
 		short old_rem_min = rem_min;
 		word old_rem_tick = rem_tick;
 
-		ok = quick_process(process_load);
+		//RnD
+		//ok = quick_process(process_load);
 		fclose(quick_fp);
 		quick_fp = NULL;
 
@@ -2026,10 +2026,11 @@ void __pascal far transition_ltr() {
 	// Estimated transition fps based on the speed of the transition on an Apple IIe.
 	// See: https://www.youtube.com/watch?v=7m7j2VuWhQ0
 	int transition_fps = 120;
-#ifdef USE_FAST_FORWARD
-	extern int audio_speed;
+//#ifdef USE_FAST_FORWARD
+	//extern 
+    int audio_speed = 1;
 	transition_fps *= audio_speed;
-#endif
+//#endif
 	Uint64 counters_per_frame = perf_frequency / transition_fps;
 	last_transition_counter = SDL_GetPerformanceCounter();
 	int overshoot = 0;

@@ -2,14 +2,22 @@
 
 ![](Images/logo.png)
 
-SDL2+SDL2_Image Port to W10M 15063 (Game "AnotherWorld" is used only for RnD) 
+SDL2+SDL2_Image Port to W10M 15063 (Game "AnotherWorld" is used only for RnD). Draft / Proto / Early bird 
 
 ## About UWP SDLAW
 An open-source port of Another World to Xbox One and Series consoles via UWP, based on the disassembly of the DOS version, extended with new features.
 
+## Screenshot(s)
+![](Images/shot1.png)
 
 ## Plan of your own RnD
-1. Fix the code bugs, create appx and install it at my L950 winphone :)
+1. Fix the code bugs
+2. Create appx 
+3. Let install it at my L950 winphone for game testing ;)
+
+## Reference(s)
+- https://github.com/fabiensanglard/Another-World-Bytecode-Interpreter "Fabother World" an interpreter for Another World (Out of this world)
+- https://github.com/fabiensanglard Fabien, Neo-Row creator / Developer
 
 ## ..
 AS IS. No support. RnD only. Geeks / Game developers only 
