@@ -294,7 +294,8 @@ Uint32
 SDL_MasksToPixelFormatEnum(int bpp, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask,
                            Uint32 Amask)
 {
-    switch (bpp) {
+    switch (bpp) 
+    {
     case 1:
         /* SDL defaults to MSB ordering */
         return SDL_PIXELFORMAT_INDEX1MSB;

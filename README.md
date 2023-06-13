@@ -9,8 +9,15 @@ An open-source port of Another World to Xbox One and Series consoles via UWP, ba
 
 ## Screenshot(s)
 ![](Images/shot1.png)
+![](Images/shot2.png)
 
-## Plan of your own RnD
+## My progress
+1. Sound - ok
+2. Video - fail
+3. Idk how to realize framebuffer renderring (i noticed that SDL UWP has no SDL_SetVideoMode function...) 
+
+
+## Plan your own RnD :)
 1. Fix the code bugs
 2. Create appx 
 3. Let install it at my L950 winphone for game testing ;)
@@ -25,4 +32,4 @@ AS IS. No support. RnD only. Geeks / Game developers only
 ## .
 [m][e] 2023
 
-![](Images/voyageurs.png)
+![](Images/another-world-art.png)

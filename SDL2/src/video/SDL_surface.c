@@ -152,8 +152,10 @@ SDL_CreateRGBSurface(Uint32 flags,
 
     /* Get the pixel format */
     format = SDL_MasksToPixelFormatEnum(depth, Rmask, Gmask, Bmask, Amask);
-    if (format == SDL_PIXELFORMAT_UNKNOWN) {
+    if (format == SDL_PIXELFORMAT_UNKNOWN) 
+    {
         SDL_SetError("Unknown pixel format");
+        //RnD
         return NULL;
     }
 

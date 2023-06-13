@@ -9,8 +9,6 @@
 #include "engine.h"
 #include "sys.h"
 #include "util.h"
-//RnD
-//#include "sysImplementation.cpp"
 
 
 static const char* USAGE =
@@ -208,11 +206,13 @@ void far pop_main()
 byte* level_var_palettes;
 
 // seg000:024F
-void __pascal far init_game_main() {
+void __pascal far init_game_main() 
+{
 	doorlink1_ad = /*&*/level.doorlinks1;
 	doorlink2_ad = /*&*/level.doorlinks2;
 	prandom(1);
-	if (graphics_mode == gmMcgaVga) {
+	if (graphics_mode == gmMcgaVga) 
+	{
 		// Guard palettes
 		guard_palettes = (byte*) load_from_opendats_alloc(10, "bin", NULL, NULL);
 		// (blood, hurt flash) #E00030 = red
@@ -238,7 +238,8 @@ void __pascal far init_game_main() {
 	hof_read();
 	show_splash(); // added
 	start_game();
-}
+
+}//init_game_main
 
 
 // data:02C2
@@ -256,10 +257,12 @@ void __pascal far start_game() {
 	// Prevent filling of stack.
 	// start_game is called from many places to restart the game, for example:
 	// process_key, play_frame, draw_game_frame, play_level, control_kid, end_sequence, expired
-	if (first_start) {
+	if (first_start) 
+	{
 		first_start = 0;
 		setjmp(/*&*/setjmp_buf);
-	} else {
+	} else 
+	{
 		draw_rect(&screen_rect, 0);
 		show_quotes();
 		clear_screen_and_sounds();
@@ -285,15 +288,19 @@ void __pascal far start_game() {
 		letts_used[copyprot_letter[which_entry]-'A'] = 1;
 	}
 #endif
-	if (custom->skip_title) { // CusPop option: skip the title sequence (level loads instantly)
+
+	if (custom->skip_title) 
+	{ // CusPop option: skip the title sequence (level loads instantly)
 		int level_number = (start_level >= 0) ? start_level : custom->first_level;
 		init_game(level_number);
 		return;
 	}
 
-	if (start_level < 0) {
+	if (start_level < 0) 
+	{
 		show_title();
-	} else {
+	} else 
+	{
 		init_game(start_level);
 	}
 }
@@ -421,7 +428,8 @@ const char* quick_file = "QUICKSAVE.SAV";
 const char quick_version[] = "V1.16b4 ";
 char quick_control[] = "........";
 
-const char* get_quick_path(char* custom_path_buffer, size_t max_len) {
+const char* get_quick_path(char* custom_path_buffer, size_t max_len) 
+{
 	if (!use_custom_levelset) {
 		return quick_file;
 	}
@@ -430,7 +438,8 @@ const char* get_quick_path(char* custom_path_buffer, size_t max_len) {
 	return custom_path_buffer;
 }
 
-int quick_save() {
+int quick_save() 
+{
 	int ok = 0;
 	char custom_quick_path[POP_MAX_PATH];
 	const char* path = get_quick_path(custom_quick_path, sizeof(custom_quick_path));
@@ -446,7 +455,8 @@ int quick_save() {
 	return ok;
 }
 
-void restore_room_after_quick_load() {
+void restore_room_after_quick_load() 
+{
 	int temp1 = curr_guard_color;
 	int temp2 = next_level;
 	reset_level_unused_fields(false);
@@ -639,7 +649,8 @@ int __pascal far process_key() {
 		}
 	}
 	// If the Kid died, Enter or Shift will restart the level.
-	if (rem_min != 0 && Kid.alive > 6 && (control_shift || key == SDL_SCANCODE_RETURN)) {
+	if (rem_min != 0 && Kid.alive > 6 && (control_shift || key == SDL_SCANCODE_RETURN)) 
+	{
 		key = SDL_SCANCODE_A | WITH_CTRL; // Ctrl+A
 	}
 #ifdef USE_REPLAY

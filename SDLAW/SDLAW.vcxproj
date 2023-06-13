@@ -529,6 +529,76 @@
     <ClInclude Include="..\src\types.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\DATA\Bank01">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank02">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank03">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank04">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank05">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank06">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank07">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank08" />
+    <None Include="..\DATA\Bank09">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank0a">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank0b">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank0c">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Bank0d">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Memlist.bin">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Setup.exe">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Setup.PIF">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Tabvol.bin">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Vol.1">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Vol.2">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Vol.3">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Vol.4">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\Vol.end">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\World.exe">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\DATA\World.PIF">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="..\SDLAW.ini">
       <DeploymentContent>true</DeploymentContent>
     </None>

@@ -19,7 +19,8 @@ void Resource::readBank(const MemEntry *me, uint8_t *dstBuf) {
 	debug(DBG_BANK, "Resource::readBank(%d)", n);
 
 	Bank bk(_dataDir);
-	if (!bk.read(me, dstBuf)) {
+	if (!bk.read(me, dstBuf)) 
+	{
 		error("Resource::readBank() unable to unpack entry %d\n", n);
 	}
 
@@ -56,7 +57,8 @@ void Resource::readEntries() {
 	int resourceCounter = 0;
 	
 
-	if (!f.open("memlist.bin", _dataDir)) {
+	if (!f.open("memlist.bin", _dataDir)) 
+	{
 		error("Resource::readEntries() unable to open 'memlist.bin' file\n");
 		//Error will exit() no need to return or do anything else.
 	}
@@ -188,28 +190,31 @@ void Resource::loadMarkedAsNeeded() {
 		}
 
 
-		if (me->bankId == 0) {
+		if (me->bankId == 0) 
+		{
 			warning("Resource::load() ec=0x%X (me->bankId == 0)", 0xF00);
 			me->state = MEMENTRY_STATE_NOT_NEEDED;
-		} else {
+		} else 
+		{
 			debug(DBG_BANK, "Resource::load() bufPos=%X size=%X type=%X pos=%X bankId=%X", loadDestination - _memPtrStart, me->packedSize, me->type, me->bankOffset, me->bankId);
 			readBank(me, loadDestination);
-			if(me->type == RT_POLY_ANIM) {
+
+			if(me->type == RT_POLY_ANIM) 
+			{
 				video->copyPagePtr(_vidCurPtr);
 				me->state = 0;
-			} else {
+			} else 
+			{
 				me->bufPtr = loadDestination;
 				me->state = MEMENTRY_STATE_LOADED;
 				_scriptCurPtr += me->size;
 			}
 		}
-
 	}
-
-
 }
 
-void Resource::invalidateRes() {
+void Resource::invalidateRes() 
+{
 	MemEntry *me = _memList;
 	uint16_t i = _numMemList;
 	while (i--) {
@@ -221,7 +226,8 @@ void Resource::invalidateRes() {
 	_scriptCurPtr = _scriptBakPtr;
 }
 
-void Resource::invalidateAll() {
+void Resource::invalidateAll() 
+{
 	MemEntry *me = _memList;
 	uint16_t i = _numMemList;
 	while (i--) {
@@ -238,9 +244,11 @@ void Resource::invalidateAll() {
 
 	This is decided based on the resourceId. If it does not match a mementry id it is supposed to 
 	be a part id. */
-void Resource::loadPartsOrMemoryEntry(uint16_t resourceId) {
+void Resource::loadPartsOrMemoryEntry(uint16_t resourceId) 
+{
 
-	if (resourceId > _numMemList) {
+	if (resourceId > _numMemList) 
+	{
 
 		requestedNextPart = resourceId;
 
@@ -268,7 +276,11 @@ void Resource::setupPart(uint16_t partId) {
 		return;
 
 	if (partId < GAME_PART_FIRST || partId > GAME_PART_LAST)
-		error("Resource::setupPart() ec=0x%X invalid partId", partId);
+	{
+		//RnD
+		//error("Resource::setupPart() ec=0x%X invalid partId", partId);
+		return;
+	}
 
 	uint16_t memListPartIndex = partId - GAME_PART_FIRST;
 

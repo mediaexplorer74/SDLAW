@@ -19,7 +19,9 @@ bool Bank::read(const MemEntry *me, uint8_t *buf) {
 	File f;
 
 	if (!f.open(bankName, _dataDir))
+	{
 		error("Bank::read() unable to open '%s'", bankName);
+	}
 
 	
 	f.seek(me->bankOffset);
@@ -39,7 +41,8 @@ bool Bank::read(const MemEntry *me, uint8_t *buf) {
 	return ret;
 }
 
-void Bank::decUnk1(uint8_t numChunks, uint8_t addCount) {
+void Bank::decUnk1(uint8_t numChunks, uint8_t addCount) 
+{
 	uint16_t count = getCode(numChunks) + addCount + 1;
 	debug(DBG_BANK, "Bank::decUnk1(%d, %d) count=%d", numChunks, addCount, count);
 	_unpCtx.datasize -= count;

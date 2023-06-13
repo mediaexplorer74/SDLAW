@@ -211,6 +211,30 @@
     <None Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
     <None Include="..\SDLAW.ini" />
     <None Include="SDLAW_TemporaryKey.pfx" />
+    <None Include="..\DATA\Vol.1" />
+    <None Include="..\DATA\Vol.2" />
+    <None Include="..\DATA\Vol.3" />
+    <None Include="..\DATA\Vol.4" />
+    <None Include="..\DATA\Tabvol.bin" />
+    <None Include="..\DATA\Vol.end" />
+    <None Include="..\DATA\Setup.exe" />
+    <None Include="..\DATA\World.exe" />
+    <None Include="..\DATA\Setup.PIF" />
+    <None Include="..\DATA\World.PIF" />
+    <None Include="..\DATA\Bank01" />
+    <None Include="..\DATA\Bank02" />
+    <None Include="..\DATA\Bank03" />
+    <None Include="..\DATA\Bank04" />
+    <None Include="..\DATA\Bank05" />
+    <None Include="..\DATA\Bank06" />
+    <None Include="..\DATA\Bank07" />
+    <None Include="..\DATA\Bank08" />
+    <None Include="..\DATA\Bank09" />
+    <None Include="..\DATA\Bank0a" />
+    <None Include="..\DATA\Bank0b" />
+    <None Include="..\DATA\Bank0c" />
+    <None Include="..\DATA\Bank0d" />
+    <None Include="..\DATA\Memlist.bin" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResources.rc" />
