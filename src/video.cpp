@@ -606,8 +606,10 @@ Note: The palettes set used to be allocated on the stack but I moved it to
       the heap so I could dump the four framebuffer and follow how
 	  frames are generated.
 */
-uint8_t pal[NUM_COLORS * 3]; //3 = BYTES_PER_PIXEL
-void Video::changePal(uint8_t palNum) {
+//uint8_t pal[NUM_COLORS * 3]; //3 = BYTES_PER_PIXEL
+/*
+void Video::changePal(uint8_t palNum) 
+{
 
 	if (palNum >= 32)
 		return;
@@ -646,21 +648,40 @@ void Video::changePal(uint8_t palNum) {
 	      dumpPaletteCursor++;
 #endif
 }
+*/
+void Video::changePal(uint8_t palNum) 
+{
 
-void Video::updateDisplay(uint8_t pageId) {
+	if (palNum >= 32)
+		return;
+
+	uint8_t* p = res->segPalettes + palNum * 32; //colors are coded on 2bytes (565) for 16 colors = 32
+	sys->setPalette(p);
+	currentPaletteId = palNum;
+}
+
+
+//
+void Video::updateDisplay(uint8_t pageId) 
+{
 
 	debug(DBG_VIDEO, "Video::updateDisplay(%d)", pageId);
 
-	if (pageId != 0xFE) {
-		if (pageId == 0xFF) {
+	if (pageId != 0xFE) 
+	{
+		if (pageId == 0xFF) 
+		{
 			SWAP(_curPagePtr2, _curPagePtr3);
-		} else {
+		} 
+		else 
+		{
 			_curPagePtr2 = getPagePtr(pageId);
 		}
 	}
 
 	//Check if we need to change the palette
-	if (paletteIdRequested != NO_PALETTE_CHANGE_REQUESTED) {
+	if (paletteIdRequested != NO_PALETTE_CHANGE_REQUESTED) 
+	{
 		changePal(paletteIdRequested);
 		paletteIdRequested = NO_PALETTE_CHANGE_REQUESTED;
 	}
@@ -668,14 +689,16 @@ void Video::updateDisplay(uint8_t pageId) {
 	//Q: Why 160 ?
 	//A: Because one byte gives two palette indices so
 	//   we only need to move 320/2 per line.
-	sys->copyRect(0, 0, 320, 200, _curPagePtr2, 160);
+	//sys->copyRect(0, 0, 320, 200, _curPagePtr2, 160);
+	sys->updateDisplay(_curPagePtr2);
 
-		#if TRACE_FRAMEBUFFER
-	      dumpFrameBuffer(_curPagePtr2,allFrameBuffers,320,200);
-#endif
+	//	#if TRACE_FRAMEBUFFER
+	//      dumpFrameBuffer(_curPagePtr2,allFrameBuffers,320,200);
+    //#endif
 }
 
-void Video::saveOrLoad(Serializer &ser) {
+void Video::saveOrLoad(Serializer &ser)
+{
 	uint8_t mask = 0;
 	if (ser._mode == Serializer::SM_SAVE) {
 		for (int i = 0; i < 4; ++i) {

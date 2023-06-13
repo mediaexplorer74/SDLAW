@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="SDLAW" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>LIGHTUNPLATED,UNPLATED</AlternateForm>
+			<Scale>200</Scale>
+			<TargetSize>256,16,24,32,48</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="Bank01" uri="ms-resource://SDLAW/Files/Bank01">
+				<Candidate type="Path">
+					<Value>Bank01</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank02" uri="ms-resource://SDLAW/Files/Bank02">
+				<Candidate type="Path">
+					<Value>Bank02</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank03" uri="ms-resource://SDLAW/Files/Bank03">
+				<Candidate type="Path">
+					<Value>Bank03</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank04" uri="ms-resource://SDLAW/Files/Bank04">
+				<Candidate type="Path">
+					<Value>Bank04</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank05" uri="ms-resource://SDLAW/Files/Bank05">
+				<Candidate type="Path">
+					<Value>Bank05</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank06" uri="ms-resource://SDLAW/Files/Bank06">
+				<Candidate type="Path">
+					<Value>Bank06</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank07" uri="ms-resource://SDLAW/Files/Bank07">
+				<Candidate type="Path">
+					<Value>Bank07</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank09" uri="ms-resource://SDLAW/Files/Bank09">
+				<Candidate type="Path">
+					<Value>Bank09</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank0a" uri="ms-resource://SDLAW/Files/Bank0a">
+				<Candidate type="Path">
+					<Value>Bank0a</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank0b" uri="ms-resource://SDLAW/Files/Bank0b">
+				<Candidate type="Path">
+					<Value>Bank0b</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank0c" uri="ms-resource://SDLAW/Files/Bank0c">
+				<Candidate type="Path">
+					<Value>Bank0c</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Bank0d" uri="ms-resource://SDLAW/Files/Bank0d">
+				<Candidate type="Path">
+					<Value>Bank0d</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Memlist.bin" uri="ms-resource://SDLAW/Files/Memlist.bin">
+				<Candidate type="Path">
+					<Value>Memlist.bin</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SDLAW.ini" uri="ms-resource://SDLAW/Files/SDLAW.ini">
+				<Candidate type="Path">
+					<Value>SDLAW.ini</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Setup.exe" uri="ms-resource://SDLAW/Files/Setup.exe">
+				<Candidate type="Path">
+					<Value>Setup.exe</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Setup.PIF" uri="ms-resource://SDLAW/Files/Setup.PIF">
+				<Candidate type="Path">
+					<Value>Setup.PIF</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Tabvol.bin" uri="ms-resource://SDLAW/Files/Tabvol.bin">
+				<Candidate type="Path">
+					<Value>Tabvol.bin</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Vol.1" uri="ms-resource://SDLAW/Files/Vol.1">
+				<Candidate type="Path">
+					<Value>Vol.1</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Vol.2" uri="ms-resource://SDLAW/Files/Vol.2">
+				<Candidate type="Path">
+					<Value>Vol.2</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Vol.3" uri="ms-resource://SDLAW/Files/Vol.3">
+				<Candidate type="Path">
+					<Value>Vol.3</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Vol.4" uri="ms-resource://SDLAW/Files/Vol.4">
+				<Candidate type="Path">
+					<Value>Vol.4</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Vol.end" uri="ms-resource://SDLAW/Files/Vol.end">
+				<Candidate type="Path">
+					<Value>Vol.end</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="World.exe" uri="ms-resource://SDLAW/Files/World.exe">
+				<Candidate type="Path">
+					<Value>World.exe</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="World.PIF" uri="ms-resource://SDLAW/Files/World.PIF">
+				<Candidate type="Path">
+					<Value>World.PIF</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="LargeTile.png" uri="ms-resource://SDLAW/Files/Assets/LargeTile.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LargeTile.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://SDLAW/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SmallTile.png" uri="ms-resource://SDLAW/Files/Assets/SmallTile.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SmallTile.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://SDLAW/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://SDLAW/Files/Assets/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://SDLAW/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-48, AlternateForm-LIGHTUNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-48" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32, AlternateForm-LIGHTUNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-LIGHTUNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-LIGHTUNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16, AlternateForm-LIGHTUNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://SDLAW/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://SDLAW/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

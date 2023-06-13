@@ -9,7 +9,7 @@
   <Identity
     Name="SDLAW"
     Publisher="CN=Admin"
-    Version="1.0.8.0" />
+    Version="1.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="a4d23393-3689-46e4-8f24-467248c1dc61" PhonePublisherId="00440003-0240-0230-0440-250000002400"/>
 

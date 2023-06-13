@@ -1,0 +1,29 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (SDLPoP.vcxproj, winrt.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  seg000.cpp
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(252,18): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(252,18): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(418,15): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(418,15): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(426,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(426,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(484,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(484,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(514,12): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(514,12): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(523,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(523,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(533,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(533,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(545,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(545,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(547,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(547,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(561,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(561,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(585,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(585,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(587,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(587,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg000.cpp(1874,41): warning C4244: =: преобразование "double" в "word", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg000.cpp(1916,59): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+  SDLAW.vcxproj -> C:\Users\Admin\source\repos\!Another\SDLAW\x64\Debug\SDLAW\SDLAW.exe

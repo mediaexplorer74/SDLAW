@@ -1033,7 +1033,8 @@ void __pascal far free_peel(peel_type* peel_ptr) {
 }
 
 // seg009:182F
-void __pascal far set_hc_pal() {
+void __pascal far set_hc_pal() 
+{
 	// stub
 	if (graphics_mode == gmMcgaVga) {
 		set_pal_arr(0, 16, custom->vga_palette, 1);
@@ -2683,7 +2684,8 @@ void __pascal far set_gr_mode(byte grmode) {
 	}
 	init_overlay();
 	init_scaling();
-	if (start_fullscreen) {
+	if (start_fullscreen) 
+	{
 		SDL_ShowCursor(SDL_DISABLE);
 	}
 

@@ -1,7 +1,6 @@
-//
-//SDLPoP, a port/conversion of the DOS game Prince of Persia.
-//Copyright (C) 2013-2020  Dávid Nagy
-//
+/* Raw - Another World Interpreter
+ * Copyright (C) 2004 Gregory Montoir
+ */
 
 #include "common.h"
 #include <setjmp.h>
@@ -20,8 +19,10 @@ static const char* USAGE =
 static bool parseOption(const char* arg, const char* longCmd, const char** opt)
 {
 	bool ret = false;
-	if (arg[0] == '-' && arg[1] == '-') {
-		if (strncmp(arg + 2, longCmd, strlen(longCmd)) == 0) {
+	if (arg[0] == '-' && arg[1] == '-') 
+	{
+		if (strncmp(arg + 2, longCmd, strlen(longCmd)) == 0) 
+		{
 			*opt = arg + 2 + strlen(longCmd);
 			ret = true;
 		}

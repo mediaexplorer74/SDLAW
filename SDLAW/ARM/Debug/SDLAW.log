@@ -1,0 +1,85 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (ARM\Debug\) содержит файлы, которые используются совместно с другим проектом (SDLPoP.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  engine.cpp
+  mixer.cpp
+  seg000.cpp
+  sfxplayer.cpp
+C:\Users\Admin\source\repos\!Another\SDLAW\src\sfxplayer.cpp(43,36): warning C4244: =: преобразование "uint16_t" в "uint8_t", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\sfxplayer.cpp(162,38): warning C4244: аргумент: преобразование "int16_t" в "uint8_t", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\sfxplayer.cpp(184,46): warning C4244: аргумент: преобразование "uint16_t" в "uint8_t", возможна потеря данных
+  sysImplementation.cpp
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(252,18): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(252,18): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(418,15): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(418,15): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(426,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(426,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(484,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(484,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(514,12): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(514,12): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(523,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(523,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(533,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(533,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(545,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(545,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(547,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(547,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(561,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(561,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(585,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(585,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(587,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении) (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(587,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения (компилируется исходный файл ..\src\seg000.cpp)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg000.cpp(438,2): warning C4018: >=: несоответствие типов со знаком и без знака
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg000.cpp(1874,41): warning C4244: =: преобразование "double" в "word", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg000.cpp(1916,59): warning C4244: =: преобразование "word" в "byte", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg000.cpp(2136,2): warning C4018: >=: несоответствие типов со знаком и без знака
+  video.cpp
+  vm.cpp
+C:\Users\Admin\source\repos\!Another\SDLAW\src\vm.cpp(27,45): warning C4244: =: преобразование "time_t" в "int16_t", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\vm.cpp(338,20): warning C4244: аргумент: преобразование "uint16_t" в "uint8_t", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\video.cpp(113,13): warning C4244: аргумент: преобразование "uint16_t" в "uint8_t", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\video.cpp(182,32): warning C4244: аргумент: преобразование "uint16_t" в "uint8_t", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\video.cpp(241,22): warning C4244: аргумент: преобразование "uint16_t" в "uint8_t", возможна потеря данных
+  seg009.cpp
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(252,18): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(252,18): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(418,15): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(418,15): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(426,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(426,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(484,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(484,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(514,12): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(514,12): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(523,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(523,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(533,7): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(533,7): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(545,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(545,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(547,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(547,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(561,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(561,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(585,9): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(585,9): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(587,8): warning C4200: нестандартное расширение: массив нулевого размера в структуре (объединении)
+C:\Users\Admin\source\repos\!Another\SDLAW\src\types.h(587,8): message : Этот член будет пропущен конструктором, установленным по умолчанию, или оператором назначения копии или перемещения
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(330,21): warning C4244: =: преобразование "time_t" в "dword", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(1337,131): warning C4244: аргумент: преобразование "short" в "byte", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(1663,22): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(2051,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(2754,45): warning C4838: Преобразование из "int" в "short" требует сужающего преобразования.
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(2786,22): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(2792,45): warning C4838: Преобразование из "int" в "short" требует сужающего преобразования.
+C:\Users\Admin\source\repos\!Another\SDLAW\src\seg009.cpp(3462,64): warning C4244: =: преобразование "double" в "word", возможна потеря данных
+     Создается библиотека C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW.lib и объект C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW.exp
+  SDLAW.vcxproj -> C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW.exe
+  SDLAW -> C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW_1.1.0.0_ARM_Debug.appx
+  SDLAW -> C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW_1.1.0.0_scale-100.appx
+  SDLAW -> C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW_1.1.0.0_scale-125.appx
+  SDLAW -> C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW_1.1.0.0_scale-150.appx
+  SDLAW -> C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\SDLAW_1.1.0.0_scale-400.appx
+  SDLAW -> C:\Users\Admin\source\repos\!Another\SDLAW\AppPackages\SDLAW\SDLAW_1.1.0.0_Debug_Test\SDLAW_1.1.0.0_arm_Debug.appxbundle
