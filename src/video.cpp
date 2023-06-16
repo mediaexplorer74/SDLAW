@@ -8,7 +8,8 @@
 #include "sys.h"
 
 
-void Polygon::readVertices(const uint8_t *p, uint16_t zoom) {
+void Polygon::readVertices(const uint8_t *p, uint16_t zoom) 
+{
 	bbw = (*p++) * zoom / 64;
 	bbh = (*p++) * zoom / 64;
 	numPoints = *p++;
@@ -33,12 +34,8 @@ void Video::init() {
 	uint8_t* tmp = (uint8_t *)malloc(4*VID_PAGE_SIZE);
 	memset(tmp,0,4*VID_PAGE_SIZE);
 	
-	/*
-	for (int i = 0; i < 4; ++i) {
-		_pagePtrs[i] = allocPage();
-	}
-	*/
-	for (int i = 0; i < 4; ++i) {
+	for (int i = 0; i < 4; ++i) 
+	{
 		_pagePtrs[i] = tmp + i * VID_PAGE_SIZE;
 	}
 
@@ -91,14 +88,18 @@ void Video::readAndDrawPolygon(uint8_t color, uint16_t zoom, const Point &pt) {
 
 
 
-	} else {
+	} else 
+	{
 		i &= 0x3F;  //0x3F = 63
-		if (i == 1) {
+		if (i == 1) 
+		{
 			warning("Video::readAndDrawPolygon() ec=0x%X (i != 2)", 0xF80);
-		} else if (i == 2) {
+		} else if (i == 2) 
+		{
 			readAndDrawPolygonHierarchy(zoom, pt);
 
-		} else {
+		} else 
+		{
 			warning("Video::readAndDrawPolygon() ec=0x%X (i != 2)", 0xFBB);
 		}
 	}
@@ -168,15 +169,19 @@ void Video::fillPolygon(uint16_t color, uint16_t zoom, const Point &pt) {
 		cpt1 = (cpt1 & 0xFFFF0000) | 0x7FFF;
 		cpt2 = (cpt2 & 0xFFFF0000) | 0x8000;
 
-		if (h == 0) {	
+		if (h == 0) 
+		{	
 			cpt1 += step1;
 			cpt2 += step2;
 		} else {
-			for (; h != 0; --h) {
-				if (_hliney >= 0) {
+			for (; h != 0; --h) 
+			{
+				if (_hliney >= 0) 
+				{
 					x1 = cpt1 >> 16;
 					x2 = cpt2 >> 16;
-					if (x1 <= 319 && x2 >= 0) {
+					if (x1 <= 319 && x2 >= 0) 
+					{
 						if (x1 < 0) x1 = 0;
 						if (x2 > 319) x2 = 319;
 						(this->*drawFct)(x1, x2, color);

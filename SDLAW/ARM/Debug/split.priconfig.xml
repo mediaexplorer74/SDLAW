@@ -6,7 +6,7 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!Another\SDLAW\ARM\Debug\SDLAW\resources.pri">
+  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!GameDev\SDLAW\ARM\Debug\SDLAW\resources.pri">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />

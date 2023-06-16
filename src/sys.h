@@ -45,12 +45,9 @@ struct System {
 	virtual void destroy() = 0;
 
 	virtual void setPalette(const uint8_t* buf) = 0;
-	//virtual void setPalette(uint8_t s, uint8_t n, const uint8_t *buf) = 0;
-	
-	//RnD
+		
 	virtual void updateDisplay(const uint8_t* buf) = 0;
-	//virtual void copyRect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, const uint8_t *buf, uint32_t pitch) = 0;
-
+	
 	virtual void processEvents() = 0;
 	virtual void sleep(uint32_t duration) = 0;
 	virtual uint32_t getTimeStamp() = 0;
@@ -59,7 +56,6 @@ struct System {
 	virtual void stopAudio() = 0;
 	virtual uint32_t getOutputSampleRate() = 0;
 	
-	//virtual void *addTimer(uint32_t delay, TimerCallback callback, void *param) = 0;
 	virtual int addTimer(uint32_t delay, TimerCallback callback, void* param) = 0;
 
 	virtual void removeTimer(int timerId) = 0;
@@ -69,7 +65,6 @@ struct System {
 	virtual void lockMutex(void *mutex) = 0;
 	virtual void unlockMutex(void *mutex) = 0;
 
-	//virtual uint8_t* getOffScreenFramebuffer() = 0;
 };
 
 

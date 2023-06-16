@@ -34,70 +34,12 @@
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\data.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\lighting.c">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\main.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\menu.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\midi.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\opl3.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\options.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\replay.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\screenshot.c">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="..\src\seg000.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\seg002.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg001.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\stb_vorbis.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg003.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg004.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg005.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg006.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg007.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg008.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seg009.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\seqtbl.c">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Externals\SDL2\src\main\winrt\SDL_winrt_main_NonXAML.cpp" />
     <ClCompile Include="..\src\bank.cpp">
       <Filter>source</Filter>
     </ClCompile>
@@ -111,9 +53,6 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="..\src\parts.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\pop_main.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="..\src\resource.cpp">
@@ -140,15 +79,18 @@
     <ClCompile Include="..\src\vm.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\data.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\SDL2\src\main\winrt\SDL_winrt_main_NonXAML.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\common.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\src\config.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\data.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\src\GPLv3.h">
@@ -205,36 +147,28 @@
     <ClInclude Include="..\src\vm.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\data.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SDLPop_TemporaryKey.pfx" />
     <None Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
     <None Include="..\SDLAW.ini" />
-    <None Include="SDLAW_TemporaryKey.pfx" />
-    <None Include="..\DATA\Vol.1" />
-    <None Include="..\DATA\Vol.2" />
-    <None Include="..\DATA\Vol.3" />
-    <None Include="..\DATA\Vol.4" />
-    <None Include="..\DATA\Tabvol.bin" />
-    <None Include="..\DATA\Vol.end" />
-    <None Include="..\DATA\Setup.exe" />
-    <None Include="..\DATA\World.exe" />
-    <None Include="..\DATA\Setup.PIF" />
-    <None Include="..\DATA\World.PIF" />
-    <None Include="..\DATA\Bank01" />
-    <None Include="..\DATA\Bank02" />
-    <None Include="..\DATA\Bank03" />
-    <None Include="..\DATA\Bank04" />
-    <None Include="..\DATA\Bank05" />
-    <None Include="..\DATA\Bank06" />
-    <None Include="..\DATA\Bank07" />
-    <None Include="..\DATA\Bank08" />
-    <None Include="..\DATA\Bank09" />
-    <None Include="..\DATA\Bank0a" />
-    <None Include="..\DATA\Bank0b" />
-    <None Include="..\DATA\Bank0c" />
-    <None Include="..\DATA\Bank0d" />
     <None Include="..\DATA\Memlist.bin" />
+    <None Include="..\DATA\Bank0d" />
+    <None Include="..\DATA\Bank0c" />
+    <None Include="..\DATA\Bank0b" />
+    <None Include="..\DATA\Bank0a" />
+    <None Include="..\DATA\Bank09" />
+    <None Include="..\DATA\Bank08" />
+    <None Include="..\DATA\Bank07" />
+    <None Include="..\DATA\Bank06" />
+    <None Include="..\DATA\Bank05" />
+    <None Include="..\DATA\Bank04" />
+    <None Include="..\DATA\Bank03" />
+    <None Include="..\DATA\Bank02" />
+    <None Include="..\DATA\Bank01" />
+    <None Include="SDLAW_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResources.rc" />

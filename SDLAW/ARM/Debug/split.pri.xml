@@ -42,6 +42,11 @@
 					<Value>Bank07</Value>
 				</Candidate>
 			</NamedResource>
+			<NamedResource name="Bank08" uri="ms-resource://SDLAW/Files/Bank08">
+				<Candidate type="Path">
+					<Value>Bank08</Value>
+				</Candidate>
+			</NamedResource>
 			<NamedResource name="Bank09" uri="ms-resource://SDLAW/Files/Bank09">
 				<Candidate type="Path">
 					<Value>Bank09</Value>
@@ -50,11 +55,6 @@
 			<NamedResource name="Bank0a" uri="ms-resource://SDLAW/Files/Bank0a">
 				<Candidate type="Path">
 					<Value>Bank0a</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Bank0b" uri="ms-resource://SDLAW/Files/Bank0b">
-				<Candidate type="Path">
-					<Value>Bank0b</Value>
 				</Candidate>
 			</NamedResource>
 			<NamedResource name="Bank0c" uri="ms-resource://SDLAW/Files/Bank0c">
@@ -75,56 +75,6 @@
 			<NamedResource name="SDLAW.ini" uri="ms-resource://SDLAW/Files/SDLAW.ini">
 				<Candidate type="Path">
 					<Value>SDLAW.ini</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Setup.exe" uri="ms-resource://SDLAW/Files/Setup.exe">
-				<Candidate type="Path">
-					<Value>Setup.exe</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Setup.PIF" uri="ms-resource://SDLAW/Files/Setup.PIF">
-				<Candidate type="Path">
-					<Value>Setup.PIF</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Tabvol.bin" uri="ms-resource://SDLAW/Files/Tabvol.bin">
-				<Candidate type="Path">
-					<Value>Tabvol.bin</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Vol.1" uri="ms-resource://SDLAW/Files/Vol.1">
-				<Candidate type="Path">
-					<Value>Vol.1</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Vol.2" uri="ms-resource://SDLAW/Files/Vol.2">
-				<Candidate type="Path">
-					<Value>Vol.2</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Vol.3" uri="ms-resource://SDLAW/Files/Vol.3">
-				<Candidate type="Path">
-					<Value>Vol.3</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Vol.4" uri="ms-resource://SDLAW/Files/Vol.4">
-				<Candidate type="Path">
-					<Value>Vol.4</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="Vol.end" uri="ms-resource://SDLAW/Files/Vol.end">
-				<Candidate type="Path">
-					<Value>Vol.end</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="World.exe" uri="ms-resource://SDLAW/Files/World.exe">
-				<Candidate type="Path">
-					<Value>World.exe</Value>
-				</Candidate>
-			</NamedResource>
-			<NamedResource name="World.PIF" uri="ms-resource://SDLAW/Files/World.PIF">
-				<Candidate type="Path">
-					<Value>World.PIF</Value>
 				</Candidate>
 			</NamedResource>
 			<ResourceMapSubtree name="Assets">

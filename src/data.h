@@ -1,7 +1,5 @@
-/*
-SDLPoP, a port/conversion of the DOS game Prince of Persia.
-Copyright (C) 2013-2020  Dávid Nagy
-*/
+//SDLAW, a port/conversion of the DOS game MediaExplorer.
+//MediaExplorer 2023
 
 #ifndef DATA_H
 #define DATA_H
@@ -68,6 +66,7 @@ extern word cplevel_entr[14];
 // data:46C6
 extern dialog_type* copyprot_dialog;
 // data:2944
+/*
 extern dialog_settings_type dialog_settings
 	INIT(= {
 		add_dialog_rect,
@@ -75,6 +74,7 @@ extern dialog_settings_type dialog_settings
 		4, 4, 4, 4, 3, 4, 1
 	});
 // data:2B76
+*/
 extern rect_type dialog_rect_1 INIT(= {60, 56, 124, 264});
 // data:2B7E
 extern rect_type dialog_rect_2 INIT(= {61, 56, 120, 264});
@@ -302,6 +302,7 @@ extern word is_cutscene;
 extern bool is_ending_sequence; // added
 
 // data:0FA0
+/*
 extern cutscene_ptr_type tbl_cutscenes[16] INIT(= {
 	NULL,
 	NULL,
@@ -320,6 +321,7 @@ extern cutscene_ptr_type tbl_cutscenes[16] INIT(= {
 	NULL,
 	NULL,
 });
+*/
 
 // data:408C
 extern short mobs_count;

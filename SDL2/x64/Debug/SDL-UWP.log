@@ -60,10 +60,10 @@
   SDL_dummysensor.c
   SDL_sensor.c
   SDL_getenv.c
-C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\src\stdlib\SDL_getenv.c(128,48): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\src\stdlib\SDL_getenv.c(143,22): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
-C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\src\stdlib\SDL_getenv.c(231,15): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
   SDL_iconv.c
+C:\Users\Admin\source\repos\!GameDev\SDLAW\SDL2\src\stdlib\SDL_getenv.c(128,48): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Admin\source\repos\!GameDev\SDLAW\SDL2\src\stdlib\SDL_getenv.c(143,22): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Admin\source\repos\!GameDev\SDLAW\SDL2\src\stdlib\SDL_getenv.c(231,15): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
   SDL_malloc.c
   SDL_qsort.c
   SDL_stdlib.c
@@ -111,11 +111,11 @@ C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\src\stdlib\SDL_getenv.c(231,15):
   SDL_winrtopengles.cpp
   SDL_winrtpointerinput.cpp
   SDL_winrtvideo.cpp
-C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\src\video\winrt\SDL_winrtvideo.cpp(461,38): warning C4973: Windows::UI::ViewManagement::IApplicationView::IsFullScreen::get: помечен как нерекомендованный
-C:\Users\Admin\source\repos\!Another\SDLAW\SDL2\src\video\winrt\SDL_winrtvideo.cpp(461,38): message : Сообщение: "To check full screen mode, use IsFullScreenMode. To check if the view is adjacent to both edges, use AdjacentToLeftDisplayEdge and AdjacentToRightDisplayEdge. For more info, see MSDN."
+C:\Users\Admin\source\repos\!GameDev\SDLAW\SDL2\src\video\winrt\SDL_winrtvideo.cpp(461,38): warning C4973: Windows::UI::ViewManagement::IApplicationView::IsFullScreen::get: помечен как нерекомендованный
+C:\Users\Admin\source\repos\!GameDev\SDLAW\SDL2\src\video\winrt\SDL_winrtvideo.cpp(461,38): message : Сообщение: "To check full screen mode, use IsFullScreenMode. To check if the view is adjacent to both edges, use AdjacentToLeftDisplayEdge and AdjacentToRightDisplayEdge. For more info, see MSDN."
   SDL_syspower.cpp
   SDL_syscond.cpp
   SDL_sysmutex.cpp
   SDL_systhread.cpp
-     Создается библиотека C:\Users\Admin\source\repos\!Another\SDLAW\x64\Debug\SDL-UWP\SDL2.lib и объект C:\Users\Admin\source\repos\!Another\SDLAW\x64\Debug\SDL-UWP\SDL2.exp
-  SDL-UWP.vcxproj -> C:\Users\Admin\source\repos\!Another\SDLAW\x64\Debug\SDL-UWP\SDL2.dll
+     Создается библиотека C:\Users\Admin\source\repos\!GameDev\SDLAW\x64\Debug\SDL-UWP\SDL2.lib и объект C:\Users\Admin\source\repos\!GameDev\SDLAW\x64\Debug\SDL-UWP\SDL2.exp
+  SDL-UWP.vcxproj -> C:\Users\Admin\source\repos\!GameDev\SDLAW\x64\Debug\SDL-UWP\SDL2.dll

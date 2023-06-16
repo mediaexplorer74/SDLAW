@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources targetOsVersion="10.0.0" majorVersion="1">
-  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!Another\SDLAW\Objs\SDL2_image-UWP\x64\Debug\filtered.layout.resfiles">
+  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!GameDev\SDLAW\Objs\SDL2_image-UWP\x64\Debug\filtered.layout.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
@@ -15,7 +15,7 @@
     </default>
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!Another\SDLAW\Objs\SDL2_image-UWP\x64\Debug\resources.resfiles">
+  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!GameDev\SDLAW\Objs\SDL2_image-UWP\x64\Debug\resources.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
@@ -32,7 +32,7 @@
     <indexer-config type="RESJSON" initialPath="SDL2_image_UWP" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!Another\SDLAW\Objs\SDL2_image-UWP\x64\Debug\pri.resfiles">
+  <index root="\" startIndexAt="C:\Users\Admin\source\repos\!GameDev\SDLAW\Objs\SDL2_image-UWP\x64\Debug\pri.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
@@ -48,7 +48,7 @@
     <indexer-config type="PRI" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="C:\Users\Admin\source\repos\!Another\SDLAW\Objs\SDL2_image-UWP\x64\Debug\embed" startIndexAt="embed.resfiles">
+  <index root="C:\Users\Admin\source\repos\!GameDev\SDLAW\Objs\SDL2_image-UWP\x64\Debug\embed" startIndexAt="embed.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />

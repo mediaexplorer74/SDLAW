@@ -1,4 +1,4 @@
-//SDLPoP, a port/conversion of the DOS game Prince of Persia.
+//SDLAW, a port/conversion of the DOS game Another World.
 //Copyright (C) 2013-2020  Dávid Nagy
 
 #include "common.h"
@@ -97,7 +97,7 @@ void find_exe_dir()
 	//String^ musicFolderPath = KnownFolders::MusicLibrary->Path;
 	//String^ imagesFolderPath = KnownFolders::PicturesLibrary->Path;	
 
-	// must return "C:\Data\Users\DefApps\APPDATA\Local\Packages\SDLPoP_cj4nrm0qt9s1y\LocalState"
+	// must return "C:\Data\Users\DefApps\APPDATA\Local\Packages\SDLAW_xxxxxxxxxxx\LocalState"
 	wcstombs
 	(exe_dir, Windows::Storage::ApplicationData::Current->LocalFolder->Path->Data(), 
 		POP_MAX_PATH
@@ -126,7 +126,7 @@ const char* locate_file_(const char* filename, char* path_buffer, int buffer_siz
 	{
 		/*
 		// old functionality
-		// If failed, it may be that SDLPoP is being run from the wrong different working directory.
+		// If failed, it may be that SDLAW is being run from the wrong different working directory.
 		// We can try to rescue the situation by loading from the directory of the executable.
 		find_exe_dir();
 		snprintf_check(path_buffer, buffer_size, "%s/%s", exe_dir, filename);
@@ -3354,7 +3354,9 @@ void draw_colored_torch(int color, SDL_Surface* image, int xpos, int ypos) {
 	int iRed = ((color >> 4) & 3) * 85;
 	int iGreen = ((color >> 2) & 3) * 85;
 	int iBlue = ((color >> 0) & 3) * 85;
-	uint32_t old_color = SDL_MapRGB(colored_image->format, 0xFC, 0x84, 0x00) & 0xFFFFFF; // the orange in the flame
+	
+	// the orange in the flame
+	uint32_t old_color = SDL_MapRGB(colored_image->format, 0xFC, 0x84, 0x00) & 0xFFFFFF;	
 	uint32_t new_color = SDL_MapRGB(colored_image->format, iRed, iGreen, iBlue) & 0xFFFFFF;
 	int stride = colored_image->pitch;
 	for (y = 0; y < h; ++y) {
@@ -3374,7 +3376,8 @@ void draw_colored_torch(int color, SDL_Surface* image, int xpos, int ypos) {
 }
 #endif
 
-image_type far* __pascal far method_6_blit_img_to_scr(image_type far* image, int xpos, int ypos, int blit) {
+image_type far* __pascal far method_6_blit_img_to_scr(
+	image_type far* image, int xpos, int ypos, int blit) {
 	if (image == NULL) {
 		printf("method_6_blit_img_to_scr: image == NULL\n");
 		//quit(1);
@@ -3395,7 +3398,8 @@ image_type far* __pascal far method_6_blit_img_to_scr(image_type far* image, int
 	}
 
 #ifdef USE_COLORED_TORCHES
-	if (blit >= blitters_colored_flame && blit <= blitters_colored_flame_last) {
+	if (blit >= blitters_colored_flame && blit <= blitters_colored_flame_last) 
+	{
 		draw_colored_torch(blit - blitters_colored_flame, image, xpos, ypos);
 		return image;
 	}
@@ -3452,9 +3456,11 @@ double get_ticks_per_sec(int timer_index) {
 	return (double)fps / wait_time[timer_index];
 }
 
-void recalculate_feather_fall_timer(double previous_ticks_per_second, double ticks_per_second) {
+void recalculate_feather_fall_timer(double previous_ticks_per_second, double ticks_per_second) 
+{
 	if (is_feather_fall <= MAX(previous_ticks_per_second, ticks_per_second) ||
-		previous_ticks_per_second == ticks_per_second) {
+		previous_ticks_per_second == ticks_per_second) 
+	{
 		return;
 	}
 	// there are more ticks per second in base mode vs fight mode so
@@ -3512,7 +3518,8 @@ void process_events() {
 	// simultaneous SDL2 KEYDOWN and TEXTINPUT events.)
 	SDL_Event event;
 	while (SDL_PollEvent(&event) == 1) { // while there are still events to be processed
-		switch (event.type) {
+		switch (event.type) 
+		{
 		case SDL_KEYDOWN:
 		{
 			int modifier = event.key.keysym.mod;
@@ -3527,7 +3534,8 @@ void process_events() {
 			}
 #endif
 #ifdef USE_SCREENSHOT
-			if (scancode == SDL_SCANCODE_F12) {
+			if (scancode == SDL_SCANCODE_F12) 
+			{
 				if (modifier & KMOD_SHIFT) {
 					save_level_screenshot((modifier & KMOD_CTRL) != 0);
 				}
@@ -3539,9 +3547,13 @@ void process_events() {
 #endif
 #ifdef USE_MENU
 				if (escape_key_suppressed &&
-					(scancode == SDL_SCANCODE_BACKSPACE || (enable_pause_menu && scancode == SDL_SCANCODE_ESCAPE))
-					) {
-					break; // Prevent repeated keystrokes opening/closing the menu as long as the key is held down.
+					(scancode == SDL_SCANCODE_BACKSPACE 
+						|| (enable_pause_menu && scancode == SDL_SCANCODE_ESCAPE))
+					) 
+				{
+					// Prevent repeated keystrokes opening/closing the menu as long 
+					//as the key is held down.
+					break;
 				}
 				else
 #endif
@@ -3700,12 +3712,15 @@ void process_events() {
 		case SDL_JOYBUTTONDOWN:
 		case SDL_JOYBUTTONUP:
 		case SDL_JOYAXISMOTION:
-			// Only handle the event if the joystick is incompatible with the SDL_GameController interface.
+			// Only handle the event if the joystick is 
+			// incompatible with the SDL_GameController interface.
 			// (Otherwise it will interfere with the normal action of the SDL_GameController API.)
-			if (!using_sdl_joystick_interface) {
+			if (!using_sdl_joystick_interface) 
+			{
 				break;
 			}
-			if (event.type == SDL_JOYAXISMOTION) {
+			if (event.type == SDL_JOYAXISMOTION) 
+			{
 				if (event.jaxis.axis == SDL_JOYSTICK_X_AXIS) {
 					joy_axis[SDL_CONTROLLER_AXIS_LEFTX] = event.jaxis.value;
 				}
@@ -3763,8 +3778,10 @@ void process_events() {
 				break;
 
 			case SDL_WINDOWEVENT_FOCUS_GAINED:
-				// Fix for this bug: When playing back a recording, Alt+Tabbing back to SDLPoP stops the replay if Alt is released before Tab.
-			{ // If Alt is held down from Alt+Tab: ignore it until it's released.
+				// Fix for this bug: When playing back a recording, 
+				// Alt+Tabbing back to SDLAW stops the replay if Alt is released before Tab.
+			{ 
+				// If Alt is held down from Alt+Tab: ignore it until it's released.
 				const Uint8* state = SDL_GetKeyboardState(NULL);
 				if (state[SDL_SCANCODE_TAB]) ignore_tab = true;
 			}
@@ -3827,24 +3844,28 @@ void idle() {
 	update_screen();
 }
 
-void __pascal do_simple_wait(int timer_index) {
+void __pascal do_simple_wait(int timer_index) 
+{
 #ifdef USE_REPLAY
 	if ((replaying && skipping_replay) || is_validate_mode) return;
 #endif
 	update_screen();
-	while (!has_timer_stopped(timer_index)) {
+	while (!has_timer_stopped(timer_index)) 
+	{
 		SDL_Delay(1);
 		process_events();
 	}
 }
 
 word word_1D63A = 1;
-int __pascal do_wait(int timer_index) {
+int __pascal do_wait(int timer_index) 
+{
 #ifdef USE_REPLAY
 	if ((replaying && skipping_replay) || is_validate_mode) return 0;
 #endif
 	update_screen();
-	while (!has_timer_stopped(timer_index)) {
+	while (!has_timer_stopped(timer_index)) 
+	{
 		SDL_Delay(1);
 		process_events();
 		int key = do_paused();
@@ -3857,7 +3878,8 @@ int __pascal do_wait(int timer_index) {
 SDL_TimerID global_timer = NULL;
 #endif
 // seg009:78E9
-void __pascal far init_timer(int frequency) {
+void __pascal far init_timer(int frequency) 
+{
 	perf_frequency = SDL_GetPerformanceFrequency();
 #ifndef USE_COMPAT_TIMER
 	fps = frequency;
@@ -3879,7 +3901,8 @@ void __pascal far init_timer(int frequency) {
 }
 
 // seg009:35F6
-void __pascal far set_clip_rect(const rect_type far* rect) {
+void __pascal far set_clip_rect(const rect_type far* rect) 
+{
 	SDL_Rect clip_rect;
 	rect_to_sdlrect(rect, &clip_rect);
 	SDL_SetClipRect(current_target_surface, &clip_rect);
@@ -3896,15 +3919,19 @@ void __pascal far set_bg_attr(int vga_pal_index, int hc_pal_index) {
 #ifdef USE_FLASH
 	//palette[vga_pal_index] = vga_palette[hc_pal_index];
 	if (!enable_flash) return;
-	if (vga_pal_index == 0) {
+	if (vga_pal_index == 0) 
+	{
 		/*
-		if (SDL_SetAlpha(offscreen_surface, SDL_SRCALPHA, 0) != 0) {
+		if (SDL_SetAlpha(offscreen_surface, SDL_SRCALPHA, 0) != 0) 
+		{
 			sdlperror("set_bg_attr: SDL_SetAlpha");
 			quit(1);
 		}
 		*/
 		// Make the black pixels transparent.
-		if (SDL_SetColorKey(offscreen_surface, SDL_TRUE, 0) != 0) {	// SDL_SRCCOLORKEY old
+		if (SDL_SetColorKey(offscreen_surface, SDL_TRUE, 0) != 0) 
+		{	
+			// SDL_SRCCOLORKEY old
 			sdlperror("set_bg_attr: SDL_SetColorKey");
 			quit(1);
 		}
@@ -3912,7 +3939,10 @@ void __pascal far set_bg_attr(int vga_pal_index, int hc_pal_index) {
 		rect.w = offscreen_surface->w;
 		rect.h = offscreen_surface->h;
 		rgb_type palette_color = palette[hc_pal_index];
-		uint32_t rgb_color = SDL_MapRGB(onscreen_surface_->format, palette_color.r << 2, palette_color.g << 2, palette_color.b << 2) /*& 0xFFFFFF*/;
+
+		uint32_t rgb_color = SDL_MapRGB(onscreen_surface_->format, 
+			palette_color.r << 2, palette_color.g << 2, palette_color.b << 2);
+
 		//SDL_UpdateRect(onscreen_surface_, 0, 0, 0, 0);
 		// First clear the screen with the color of the flash.
 		if (safe_SDL_FillRect(onscreen_surface_, &rect, rgb_color) != 0) {
@@ -3931,22 +3961,13 @@ void __pascal far set_bg_attr(int vga_pal_index, int hc_pal_index) {
 #ifdef USE_LIGHTING
 		if (hc_pal_index == 0) update_lighting(&rect_top);
 #endif
-		if (upside_down) {
+		if (upside_down) 
+		{
 			flip_screen(offscreen_surface);
 		}
-		// And show it!
-//		update_screen();
-		// Give some time to show the flash.
-		//SDL_Flip(onscreen_surface_);
-//		if (hc_pal_index != 0) SDL_Delay(2*(1000/60));
-		//SDL_Flip(onscreen_surface_);
-		/*
-		if (SDL_SetAlpha(offscreen_surface, 0, 0) != 0) {
-			sdlperror("set_bg_attr: SDL_SetAlpha");
-			quit(1);
-		}
-		*/
-		if (SDL_SetColorKey(offscreen_surface, 0, 0) != 0) {
+	
+		if (SDL_SetColorKey(offscreen_surface, 0, 0) != 0)
+		{
 			sdlperror("set_bg_attr: SDL_SetColorKey");
 			quit(1);
 		}
@@ -3955,7 +3976,12 @@ void __pascal far set_bg_attr(int vga_pal_index, int hc_pal_index) {
 }
 
 // seg009:07EB
-rect_type far* __pascal offset4_rect_add(rect_type far* dest, const rect_type far* source, int d_left, int d_top, int d_right, int d_bottom) {
+rect_type far* __pascal offset4_rect_add
+(
+	rect_type far* dest, const rect_type far* source, 
+	int d_left, int d_top, int d_right, int d_bottom
+)
+{
 	*dest = *source;
 	dest->left += d_left;
 	dest->top += d_top;
@@ -3965,7 +3991,8 @@ rect_type far* __pascal offset4_rect_add(rect_type far* dest, const rect_type fa
 }
 
 // seg009:3AA5
-rect_type far* __pascal offset2_rect(rect_type far* dest, const rect_type far* source, int delta_x, int delta_y) {
+rect_type far* __pascal offset2_rect(
+	rect_type far* dest, const rect_type far* source, int delta_x, int delta_y) {
 	dest->top = source->top + delta_y;
 	dest->left = source->left + delta_x;
 	dest->bottom = source->bottom + delta_y;
@@ -3991,7 +4018,9 @@ void __pascal far fade_in_2(surface_type near* source_surface, int which_rows) {
 }
 
 // seg009:1A51
-palette_fade_type far* __pascal make_pal_buffer_fadein(surface_type* source_surface, int which_rows, int wait_time) {
+palette_fade_type far* __pascal make_pal_buffer_fadein(
+	surface_type* source_surface, int which_rows, int wait_time)
+{
 	palette_fade_type far* palette_buffer;
 	word curr_row;
 	word var_8;
@@ -4003,7 +4032,9 @@ palette_fade_type far* __pascal make_pal_buffer_fadein(surface_type* source_surf
 	palette_buffer->proc_restore_free = &pal_restore_free_fadein;
 	palette_buffer->proc_fade_frame = &fade_in_frame;
 	read_palette_256(palette_buffer->original_pal);
-	memcpy_far(palette_buffer->faded_pal, palette_buffer->original_pal, sizeof(palette_buffer->faded_pal));
+
+	memcpy_far(palette_buffer->faded_pal, 
+		palette_buffer->original_pal, sizeof(palette_buffer->faded_pal));
 	var_8 = 0;
 	for (curr_row = 0, curr_row_mask = 1; curr_row < 0x10; ++curr_row, curr_row_mask <<= 1) {
 		if (which_rows & curr_row_mask) {
@@ -4018,7 +4049,8 @@ palette_fade_type far* __pascal make_pal_buffer_fadein(surface_type* source_surf
 }
 
 // seg009:1B64
-void __pascal far pal_restore_free_fadein(palette_fade_type far* palette_buffer) {
+void __pascal far pal_restore_free_fadein(palette_fade_type far* palette_buffer) 
+{
 	set_pal_256(palette_buffer->original_pal);
 	free_far(palette_buffer);
 	// for RGB
@@ -4026,7 +4058,8 @@ void __pascal far pal_restore_free_fadein(palette_fade_type far* palette_buffer)
 }
 
 // seg009:1B88
-int __pascal far fade_in_frame(palette_fade_type far* palette_buffer) {
+int __pascal far fade_in_frame(palette_fade_type far* palette_buffer) 
+{
 	rgb_type* faded_pal_ptr;
 	word start;
 	word column;
@@ -4037,26 +4070,31 @@ int __pascal far fade_in_frame(palette_fade_type far* palette_buffer) {
 
 	//printf("start ticks = %u\n",SDL_GetTicks());
 	--palette_buffer->fade_pos;
-	for (start = 0, current_row_mask = 1; start < 0x100; start += 0x10, current_row_mask <<= 1) {
+	for (start = 0, current_row_mask = 1; start < 0x100; start += 0x10, current_row_mask <<= 1) 
+	{
 		if (palette_buffer->which_rows & current_row_mask) {
 			//var_12 = palette_buffer->
 			original_pal_ptr = palette_buffer->original_pal + start;
 			faded_pal_ptr = palette_buffer->faded_pal + start;
 			for (column = 0; column < 0x10; ++column) {
-				if (original_pal_ptr[column].r > palette_buffer->fade_pos) {
+				if (original_pal_ptr[column].r > palette_buffer->fade_pos) 
+				{
 					++faded_pal_ptr[column].r;
 				}
-				if (original_pal_ptr[column].g > palette_buffer->fade_pos) {
+				if (original_pal_ptr[column].g > palette_buffer->fade_pos) 
+				{
 					++faded_pal_ptr[column].g;
 				}
-				if (original_pal_ptr[column].b > palette_buffer->fade_pos) {
+				if (original_pal_ptr[column].b > palette_buffer->fade_pos) 
+				{
 					++faded_pal_ptr[column].b;
 				}
 			}
 		}
 	}
 	column = 0;
-	for (start = 0, current_row_mask = 1; start < 0x100; start += 0x10, current_row_mask <<= 1) {
+	for (start = 0, current_row_mask = 1; start < 0x100; start += 0x10, current_row_mask <<= 1) 
+	{
 		if (palette_buffer->which_rows & current_row_mask) {
 			set_pal_arr(start, 0x10, palette_buffer->faded_pal + start, (column++ & 3) == 0);
 		}
@@ -4078,7 +4116,8 @@ int __pascal far fade_in_frame(palette_fade_type far* palette_buffer) {
 	for (y = 0; y < h; ++y) {
 		byte* on_pixel_ptr = (byte*)onscreen_surface_->pixels + on_stride * y;
 		byte* off_pixel_ptr = (byte*)offscreen_surface->pixels + off_stride * y;
-		for (x = 0; x < on_stride; ++x) {
+		for (x = 0; x < on_stride; ++x) 
+		{
 			//if (*off_pixel_ptr > palette_buffer->fade_pos) *pixel_ptr += 4;
 			int v = *off_pixel_ptr - fade_pos * 4;
 			if (v < 0) v = 0;
@@ -4089,11 +4128,11 @@ int __pascal far fade_in_frame(palette_fade_type far* palette_buffer) {
 	SDL_UnlockSurface(onscreen_surface_);
 	SDL_UnlockSurface(offscreen_surface);
 
-	//SDL_UpdateRect(onscreen_surface_, 0, 0, 0, 0); // debug
-
-	/**/do_simple_wait(1); // can interrupt fading of cutscene
+	do_simple_wait(1); // can interrupt fading of cutscene
+	
 	//do_wait(timer_1); // can interrupt fading of main title
 	//printf("end ticks = %u\n",SDL_GetTicks());
+	
 	return palette_buffer->fade_pos == 0;
 }
 
@@ -4102,7 +4141,8 @@ void __pascal far fade_out_2(int rows) {
 	palette_fade_type far* palette_buffer;
 	if (graphics_mode == gmMcgaVga) {
 		palette_buffer = make_pal_buffer_fadeout(rows, 2);
-		while (fade_out_frame(palette_buffer) == 0) {
+		while (fade_out_frame(palette_buffer) == 0) 
+		{
 			process_events(); // modified
 			do_paused();
 		}
@@ -4185,11 +4225,13 @@ int __pascal far fade_out_frame(palette_fade_type far* palette_buffer) {
 	}
 
 	int h = offscreen_surface->h;
-	if (SDL_LockSurface(onscreen_surface_) != 0) {
+	if (SDL_LockSurface(onscreen_surface_) != 0) 
+	{
 		sdlperror("fade_out_frame: SDL_LockSurface");
 		quit(1);
 	}
-	if (SDL_LockSurface(offscreen_surface) != 0) {
+	if (SDL_LockSurface(offscreen_surface) != 0) 
+	{
 		sdlperror("fade_out_frame: SDL_LockSurface");
 		quit(1);
 	}
@@ -4216,7 +4258,8 @@ int __pascal far fade_out_frame(palette_fade_type far* palette_buffer) {
 }
 
 // seg009:1F28
-void __pascal far read_palette_256(rgb_type far* target) {
+void __pascal far read_palette_256(rgb_type far* target) 
+{
 	int i;
 	for (i = 0; i < 256; ++i) {
 		target[i] = palette[i];
@@ -4224,7 +4267,8 @@ void __pascal far read_palette_256(rgb_type far* target) {
 }
 
 // seg009:1F5E
-void __pascal far set_pal_256(rgb_type far* source) {
+void __pascal far set_pal_256(rgb_type far* source) 
+{
 	int i;
 	for (i = 0; i < 256; ++i) {
 		palette[i] = source[i];
@@ -4232,7 +4276,8 @@ void __pascal far set_pal_256(rgb_type far* source) {
 }
 #endif // USE_FADE
 
-void set_chtab_palette(chtab_type* chtab, byte* colors, int n_colors) {
+void set_chtab_palette(chtab_type* chtab, byte* colors, int n_colors) 
+{
 	if (chtab != NULL) {
 		SDL_Color* scolors = (SDL_Color*)malloc(n_colors * sizeof(SDL_Color));
 		int i;
@@ -4273,7 +4318,8 @@ void set_chtab_palette(chtab_type* chtab, byte* colors, int n_colors) {
 	}
 }
 
-int has_timer_stopped(int timer_index) {
+int has_timer_stopped(int timer_index) 
+{
 #ifdef USE_COMPAT_TIMER
 	return wait_time[timer_index] == 0;
 #else

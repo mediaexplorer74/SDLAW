@@ -1,7 +1,5 @@
-/*
-SDLPoP, a port/conversion of the DOS game Prince of Persia.
-Copyright (C) 2013-2020  Dávid Nagy
-*/
+// SDLAW, a port/conversion of the DOS game Another World.
+// MediaExplorer 2023
 
 #ifndef COMMON_H
 #define COMMON_H
@@ -39,6 +37,7 @@ extern "C" {
 #include "types.h"
 #include "proto.h"
 #include "data.h"
+
 
 #ifndef MAX
 #define MAX(a,b) ((a)>(b)?(a):(b))
