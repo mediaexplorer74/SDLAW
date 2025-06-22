@@ -1,6 +1,6 @@
-# SDLAW 1.1.2-alpha
+# SDLAW 1.1.3-alpha
 
-![](Images/logo.png)
+![](Images/art.png)
 
 SDL2+SDL2_Image Port to W10M 15063 (Game "AnotherWorld" is used only for RnD). Proto / Early bird 
 
@@ -17,6 +17,7 @@ An open-source port of Another World to Xbox One and Series consoles via UWP, ba
 1. Sound - ok.
 2. Video - ok.
 3. Min. Win. OS build (SDK) = 15063.
+4. Experimental mouse/touchpanel game input added(with help of AI) 
 
 ## Running
 Here are the various in game hotkeys:
@@ -32,16 +33,18 @@ Here are the various in game hotkeys:
 - TAB change window scale factor
 
 ## TODO
-1. Explore SDL features for Keyboard, Mouse, and TouchPanel. 
-2. Buy some Joystick... :)
+- Dream on C# port... :)
+
 
 ## Reference(s)
 - https://github.com/fabiensanglard/Another-World-Bytecode-Interpreter "Fabother World" an interpreter for Another World (Out of this world)
 - https://github.com/fabiensanglard Fabien, Neo-Row creator / Developer
 
 ## ..
-AS IS. No support. RnD only. Geeks / Game developers only 
+AS IS. No support. RnD only. Geeks / Game devs only 
 
 ## .
-[m][e] 2023
+[m][e] June,22 2025
+
+![](Images/footer.png)
 
