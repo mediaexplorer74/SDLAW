@@ -1,5 +1,4 @@
-# SDLAW 1.1.3-alpha
-
+# SDLAW 1.1.3
 ![](Images/art.png)
 
 SDL2+SDL2_Image Port to W10M 15063 (Game "AnotherWorld" is used only for RnD). Proto / Early bird 
