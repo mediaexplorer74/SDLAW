@@ -8,10 +8,9 @@ SDL2+SDL2_Image Port to W10M 15063 (Game "AnotherWorld" is used only for RnD). P
 An open-source port of Another World to Xbox One and Series consoles via UWP, based on the disassembly of the DOS version, extended with new features.
 
 ## Screenshots
-![](Images/shot1.png)
-![](Images/shot2.png)
-![](Images/shot3.png)
-![](Images/shot4.png)
+![W10M](Images/sshot01.png)
+![W10M](Images/sshot02.png)
+![W10M](Images/sshot03.png)
 
 ## My progress
 1. Sound - ok.
