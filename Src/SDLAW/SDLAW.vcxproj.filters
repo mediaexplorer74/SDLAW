@@ -5,6 +5,12 @@
       <UniqueIdentifier>3667300b-2f33-4384-905e-ff0e075b0140</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
     </Filter>
+
+<!-- AUTO-GENERATED DATA FILTERS BEGIN -->
+    <Filter Include="DATA">
+      <UniqueIdentifier>{B1A1B8F4-7B2E-4B7D-9B2D-000000000001}</UniqueIdentifier>
+    </Filter>
+<!-- AUTO-GENERATED DATA FILTERS END -->
     <Image Include="Assets\LockScreenLogo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
@@ -151,10 +157,11 @@
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
+
   <ItemGroup>
     <None Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResource_BlankCursor.cur" />
     <None Include="..\SDLAW.ini" />
-    <None Include="..\DATA\Memlist.bin" />
+    <!--None Include="..\DATA\Memlist.bin" />
     <None Include="..\DATA\Bank0d" />
     <None Include="..\DATA\Bank0c" />
     <None Include="..\DATA\Bank0b" />
@@ -167,9 +174,69 @@
     <None Include="..\DATA\Bank04" />
     <None Include="..\DATA\Bank03" />
     <None Include="..\DATA\Bank02" />
-    <None Include="..\DATA\Bank01" />
+    <None Include="..\DATA\Bank01" /-->
     <None Include="SDLAW_TemporaryKey.pfx" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\DATA\Bank01">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank02">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank03">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank04">
+      <DeploymentContent>true</DeploymentContent>
+       <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank05">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank06">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>    
+    </None>
+    <None Include="..\DATA\Bank07">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter> 
+   </None>
+    <None Include="..\DATA\Bank08">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank09">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank0a">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank0b">
+      <DeploymentContent>false</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank0c">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Bank0d">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+    <None Include="..\DATA\Memlist.bin">
+      <DeploymentContent>true</DeploymentContent>
+      <Filter>DATA</Filter>
+    </None>
+   </ItemGroup>
+
   <ItemGroup>
     <ResourceCompile Include="Externals\SDL2\src\main\winrt\SDL2-WinRTResources.rc" />
   </ItemGroup>

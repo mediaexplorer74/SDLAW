@@ -12,6 +12,10 @@
 #define BYTE_PER_PIXEL 3
 
 struct PlayerInput {
+	// ...
+	bool nextLevel = false;
+	bool prevLevel = false; // For level switching
+
 	enum {
 		DIR_LEFT  = 1 << 0,
 		DIR_RIGHT = 1 << 1,

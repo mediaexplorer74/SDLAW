@@ -1,4 +1,4 @@
-# SDLAW 1.1.3
+# SDLAW 1.1.4
 ![](Images/art.png)
 
 SDL2+SDL2_Image Port to W10M 15063 (Game "AnotherWorld" is used only for RnD). Proto / Early bird 
@@ -14,10 +14,10 @@ An open-source port of Another World to Xbox One and Series consoles via UWP, ba
 ## My progress
 1. Sound - ok.
 2. Video - ok.
-3. Min. Win. OS build (SDK) = 15063.
-4. Experimental mouse/touchpanel game input added(with help of AI) 
+3. Min. Win. OS build (SDK) = 10240 (Hello, Astoria!)
+4. Keyboard/mouse/touchpanel game input improved with help of WindSurf AI IDE 
 
-## Running
+## PC Running
 Here are the various in game hotkeys:
 - Arrow Keys allow you to move Lester
 - Enter/Space allow you run/shoot with your gun
@@ -29,9 +29,11 @@ Here are the various in game hotkeys:
 - Ctrl + and - change game state slot
 - Ctrl F toggle fast mode
 - TAB change window scale factor
+- N Go to next level
+- B Go to previous level
 
 ## TODO
-- Dream on C# port... :)
+- Dream on multi-touch gestures on C++ (to skip level or go to menu...)
 
 
 ## Reference(s)

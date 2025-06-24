@@ -78,6 +78,24 @@ void Engine::finish() {
 }
 
 void Engine::processInput() {
+	// --- Level switching (keyboard/touch gesture) ---
+	if (sys->input.nextLevel || sys->input.prevLevel) {
+		uint16_t currPart = res.currentPartId;
+		uint16_t newPart = currPart;
+		if (sys->input.nextLevel && currPart < GAME_PART_LAST) {
+			newPart = currPart + 1;
+		}
+		if (sys->input.prevLevel && currPart > GAME_PART_FIRST) {
+			newPart = currPart - 1;
+		}
+		if (newPart != currPart) {
+			vm.initForPart(newPart);
+		}
+		// Сбросить флаги, чтобы переход не повторялся
+		sys->input.nextLevel = false;
+		sys->input.prevLevel = false;
+	}
+
 	if (sys->input.load) {
 		loadGameState(_stateSlot);
 		sys->input.load = false;
@@ -98,6 +116,7 @@ void Engine::processInput() {
 		}
 		sys->input.stateSlot = 0;
 	}
+
 }
 
 void Engine::makeGameStateName(uint8_t slot, char *buf) {

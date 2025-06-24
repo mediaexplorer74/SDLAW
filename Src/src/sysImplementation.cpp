@@ -5,6 +5,7 @@
 #include <SDL.h>
 #include "sys.h"
 #include "util.h"
+#include <map>
 
 
 struct SDLStub : System 
@@ -156,6 +157,9 @@ void SDLStub::updateDisplay(const uint8_t* src)
 
 void SDLStub::processEvents() 
 {
+	// Reset next/prev level triggers at start of event processing
+	input.nextLevel = false;
+	input.prevLevel = false;
 	SDL_Event ev;
 	// Mouse state tracking
 	static int lastMouseX = -1, lastMouseY = -1;
@@ -164,6 +168,10 @@ void SDLStub::processEvents()
 	static float lastTouchX = 0, lastTouchY = 0;
 	static Uint32 touchDownTime = 0;
 	static bool touchMoved = false;
+
+	// --- Touch tracking for multi-finger swipe ---
+	static std::map<SDL_FingerID, std::pair<float, float>> fingerStartPos;
+	static std::map<SDL_FingerID, std::pair<float, float>> fingerLastPos;
 
 	while (SDL_PollEvent(&ev)) 
 	{
@@ -220,6 +228,13 @@ void SDLStub::processEvents()
 					input.stateSlot = -1;
 				}
 				break;
+			}
+			// --- Level switching via keyboard ---
+			if (ev.key.keysym.sym == SDLK_n) {
+				input.nextLevel = true;
+			}
+			if (ev.key.keysym.sym == SDLK_b) {
+				input.prevLevel = true;
 			}
 			input.lastChar = ev.key.keysym.sym;
 			switch (ev.key.keysym.sym) {
@@ -290,10 +305,16 @@ void SDLStub::processEvents()
 			lastTouchY = ev.tfinger.y;
 			touchDownTime = SDL_GetTicks();
 			touchMoved = false;
+			// Track all fingers
+			fingerStartPos[ev.tfinger.fingerId] = std::make_pair(ev.tfinger.x, ev.tfinger.y);
+			fingerLastPos[ev.tfinger.fingerId] = std::make_pair(ev.tfinger.x, ev.tfinger.y);
 		}
 			break;
 		case SDL_FINGERUP:
 		{
+			// Remove finger from tracking
+			fingerStartPos.erase(ev.tfinger.fingerId);
+			fingerLastPos.erase(ev.tfinger.fingerId);
 			if (ev.tfinger.fingerId == activeFinger) {
 				Uint32 tapDuration = SDL_GetTicks() - touchDownTime;
 				float dx = ev.tfinger.x - lastTouchX;
@@ -309,10 +330,33 @@ void SDLStub::processEvents()
 				input.dirMask = 0;
 				activeFinger = 0;
 			}
+			// --- Check for 3-finger swipe ---
+			if (fingerStartPos.size() == 0) {
+				// All fingers lifted, check last swipe
+				if (fingerLastPos.size() == 3) {
+					float totalDx = 0;
+					for (auto& kv : fingerLastPos) {
+						float sx = fingerStartPos[kv.first].first;
+						float ex = kv.second.first;
+						totalDx += (ex - sx);
+					}
+					const float swipeThresh = 0.15f; // normalized units
+					if (totalDx > 3 * swipeThresh) {
+						input.nextLevel = true;
+					}
+					if (totalDx < -3 * swipeThresh) {
+						input.prevLevel = true;
+					}
+				}
+				fingerStartPos.clear();
+				fingerLastPos.clear();
+			}
 		}
 		break;
 		case SDL_FINGERMOTION:
 		{
+			// Track all fingers
+			fingerLastPos[ev.tfinger.fingerId] = std::make_pair(ev.tfinger.x, ev.tfinger.y);
 			if (ev.tfinger.fingerId == activeFinger) {
 				const float threshold = 0.01f; // normalized screen coords
 				float dx = ev.tfinger.x - lastTouchX;
@@ -331,7 +375,7 @@ void SDLStub::processEvents()
 			break;
 		}
 	}
-}
+}//SDLStub::processEvents
 
 
 
